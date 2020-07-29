@@ -1,21 +1,35 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import face1 from '../../assets/images/face-male-1.jpg'
+
 import { AvatarClip, AvatarImage, StatusIcon, StyleAvatar } from './style'
 
-class Avatar extends Component {
-  render () {
-    return (
-      <StyleAvatar>
-        <StatusIcon></StatusIcon>
-        <AvatarClip>
-          <AvatarImage src={face1} alt=""/>
-        </AvatarClip>
-      </StyleAvatar>
-    )
-  }
+// 如何用组件来进行改造？？？
+/**
+ *
+ * @param{string} src 头像地址
+ * @param{string} size 头像尺寸
+ * @param status 在线状态
+ * @param{string} statusIconSize 在线状态图标尺寸
+ * @param rest
+ * @returns {JSX.Element}
+ * @constructor
+ */
+function Avatar ({ src, size = '48px', status, statusIconSize = '8px', ...rest }) {
+  return (
+    <StyleAvatar { ...rest }>
+      { status && <StatusIcon status={ status } size={ statusIconSize }/> }
+      <AvatarClip size={ size }>
+        <AvatarImage src={ src } alt=""/>
+      </AvatarClip>
+    </StyleAvatar>
+  )
 }
 
-Avatar.propTypes = {}
+Avatar.propTypes = {
+  src: PropTypes.string.isRequired,
+  size: PropTypes.string,
+  status: PropTypes.oneOf(['online', 'offline']),
+  statusIconSize: PropTypes.string
+}
 
 export default Avatar

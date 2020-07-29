@@ -8,15 +8,16 @@ import styled, { css } from 'styled-components'
  */
 
 /**
- * 复用css代码
- * @param{string} color 背景颜色
+ * 在线状态图标
+ * @param{string} color 在线图标背景颜色
+ * @param{string} size 在线图标尺寸大小
  */
-const circleMixinFunc = color => css`
+const circleMixinFunc = (color, size = '8px') => css`
   content: "";
   display: block;
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: ${ size };
+  height: ${ size };
   border-radius: 50%;
   background-color: ${ color };
 `
@@ -33,20 +34,27 @@ const StatusIcon = styled.div`
   top : 4px;
   
   &::before {
-    ${circleMixinFunc("white")};
+    ${ ({ size }) => circleMixinFunc('white', size) };
     
     transform: scale(2);
   }
   
   &::after {
-    ${ ({ theme }) => circleMixinFunc(theme.green) }
-  }
+    ${ ({ theme, status, size }) => {
+      if (status === 'online') {
+        // 此处的size 为 状态图标的尺寸(statusIconSize)
+        return circleMixinFunc(theme.green, size)
+      } else if (status === 'offline') {
+        return circleMixinFunc(theme.gray, size)
+      }
+    }
+}
 `
 
 // 圆型蒙版
 const AvatarClip = styled.div`
-  width: 48px;
-  height: 48px;
+  width: ${ ({ size }) => size };
+  height: ${ ({ size }) => size };
   border-radius: 50%;
   overflow: hidden;
 `
