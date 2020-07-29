@@ -1,5 +1,5 @@
 ---
-to: src/components/<%= name %>/index.js
+to: src/components/<%= name %>/index.jsx
 ---
 
 import React from 'react'
