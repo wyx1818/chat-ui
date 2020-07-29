@@ -1,11 +1,4 @@
-/**
- * 模块导入
- */
 import styled, { css } from 'styled-components'
-
-/**
- * 头像样式
- */
 
 /**
  * 在线状态图标
@@ -32,13 +25,13 @@ const StatusIcon = styled.div`
   position: absolute;
   left: 2px;
   top : 4px;
-  
+
   &::before {
     ${ ({ size }) => circleMixinFunc('white', size) };
-    
+
     transform: scale(2);
   }
-  
+
   &::after {
     ${ ({ theme, status, size }) => {
       if (status === 'online') {
@@ -66,5 +59,6 @@ const AvatarImage = styled.img`
   object-fit: cover;   // 等比例缩放填满容器
   object-position: center; // 在容器居中
 `
+export default StyleAvatar
 
-export { StyleAvatar, StatusIcon, AvatarClip, AvatarImage }
+export { StatusIcon, AvatarClip, AvatarImage }

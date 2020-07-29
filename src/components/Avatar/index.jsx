@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { AvatarClip, AvatarImage, StatusIcon, StyleAvatar } from './style'
+import StyleAvatar, { AvatarClip, AvatarImage, StatusIcon } from './style'
 
-// 如何用组件来进行改造？？？
 /**
  *
  * @param{string} src 头像地址
