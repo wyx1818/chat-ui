@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import StyleBadge, { Count } from './style'
+import StyledBadge, { Count } from './style'
 
 function Badge ({
     children,
@@ -11,7 +11,7 @@ function Badge ({
     ...rest
   }) {
   return (
-    <StyleBadge
+    <StyledBadge
       variant = { children ? 'dot': 'default' }
       show={ show }
       count={ count }
@@ -19,7 +19,7 @@ function Badge ({
       { ...rest }
     >
       { children || <Count>{ count }</Count> }
-    </StyleBadge>
+    </StyledBadge>
   )
 }
 

@@ -5,9 +5,42 @@ import { css } from 'styled-components'
  * @param{string} color 在线图标背景颜色
  * @param{string} size 在线图标尺寸大小
  */
-export const circleCSS = (color, size = '8px') => css`
+export const circleCss = (color, size = '8px') => css`
   width: ${ size };
   height: ${ size };
   border-radius: 50%;
   background-color: ${ color };
+`
+
+export const activeBarCss = ({ barWidth = '8px', shadowWidth = '20px' } = {}) => css`
+  position: relative;
+
+  &::before, &::after {
+    display: block;
+    content: '';
+    height: 100%;
+    position: absolute;
+    left: 0;
+  }
+
+  // 显示条
+  &::before {
+    width: ${ barWidth };
+    background: linear-gradient(
+      180deg,
+      rgba(142, 197, 242, 1) 0%,
+      rgba(79, 157, 222, 1) 100%
+    );
+  }
+
+  // 阴影
+  &::after {
+    width: ${ shadowWidth };
+    background: linear-gradient(
+      270deg,
+      rgba(41, 47, 76, 1) 0%,
+      rgba(142, 197, 242, 1) 100%
+    );
+    opacity: 0.6;
+  }
 `

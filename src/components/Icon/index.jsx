@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import StyleIcon from './style'
+import StyledIcon from './style'
 
 /**
  *
@@ -23,9 +23,9 @@ function Icon ({
     ...rest
   }) {
   return (
-    <StyleIcon color={ color } opacity={ opacity } { ...rest }>
+    <StyledIcon color={ color } opacity={ opacity } { ...rest }>
       { IconComponent && <IconComponent width={ width } height={ height }/> }
-    </StyleIcon>
+    </StyledIcon>
   )
 }
 
