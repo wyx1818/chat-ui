@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { circleCSS } from '../../utils/mixins'
 
 /**
  * 在线状态图标
@@ -9,10 +10,7 @@ const circleMixinFunc = (color, size = '8px') => css`
   content: "";
   display: block;
   position: absolute;
-  width: ${ size };
-  height: ${ size };
-  border-radius: 50%;
-  background-color: ${ color };
+  ${ circleCSS(color, size) }
 `
 
 // 头像最外层

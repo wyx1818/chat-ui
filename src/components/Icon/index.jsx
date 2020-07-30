@@ -23,14 +23,14 @@ function Icon ({
     ...rest
   }) {
   return (
-    <StyleIcon color={color} opacity={opacity} { ...rest }>
-      { IconComponent && <IconComponent width={width} height={height} />}
+    <StyleIcon color={ color } opacity={ opacity } { ...rest }>
+      { IconComponent && <IconComponent width={ width } height={ height }/> }
     </StyleIcon>
   )
 }
 
 Icon.propTypes = {
-  icon: PropTypes.element,
+  icon: PropTypes.oneOfType([PropTypes.element, PropTypes.elementType]),
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   color: PropTypes.string,

@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCommentDots, faFolder, faStickyNote } from '@fortawesome/free-solid-svg-icons'
 
-import Icon from '.'
+import Icon from './'
 import { ReactComponent as SmileIcon } from 'assets/icons/smile.svg'
 
 export default {
@@ -13,7 +13,7 @@ export default {
 export const Default = () => <Icon icon={ SmileIcon }/>
 
 export const CustomColor = () => {
-  return <Icon color='#cccccc' icon={ SmileIcon }/>
+  return <Icon icon={ SmileIcon } color='#cccccc'/>
 }
 
 export const CustomSize = () => {
