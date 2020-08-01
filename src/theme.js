@@ -8,7 +8,7 @@ export default {
   darkPurple: '#292F4C', // 菜单色
   grayBG: 'rgba(241, 237, 237, 0.3)', // 灰色背景
   grayPlaceholder: 'rgba(24, 28, 47, 0.3)', // 文字占位符颜色
-  grayInput: '#181C2F', // 输入框文字颜色
+  grayDark: '#181C2F',
 
   // 字体大小
   XXSmall: '0.8rem',

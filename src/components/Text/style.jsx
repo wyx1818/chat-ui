@@ -3,10 +3,10 @@ import styled, { css } from 'styled-components'
 // 类型变体
 const typeVariants = {
   primary: css`
-    color: ${ ({ theme }) => theme.grayInput };
+    color: ${ ({ theme }) => theme.grayDark };
   `,
   secondary: css`
-    color: ${ ({ theme }) => theme.grayInput };
+    color: ${ ({ theme }) => theme.grayDark };
     opacity: 0.3;
   `,
   danger: css`

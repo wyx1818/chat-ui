@@ -7,7 +7,7 @@ const StyledInput = styled.input`
   height: 48px;
   border: none;
   background: none;
-  color: ${ ({ theme }) => theme.grayInput };
+  color: ${ ({ theme }) => theme.grayDark };
   font-size: ${ ({ theme }) => theme.medium };
   &::placeholder {
     color: ${ ({ theme }) => theme.grayPlaceholder };

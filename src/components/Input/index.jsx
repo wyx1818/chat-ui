@@ -37,7 +37,7 @@ function Search ({ placeholder = '请输入内容', ...rest }) {
   return (
     <Input
       placeholder={ placeholder }
-      prefixIcon={ <Icon icon={ SearchIcon } width={ 18 } height={ 18 } color={ theme.grayInput }/> }
+      prefixIcon={ <Icon icon={ SearchIcon } width={ 18 } height={ 18 } color={ theme.grayDark }/> }
       { ...rest }
     >
 
