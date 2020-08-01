@@ -10,6 +10,13 @@ export default {
   grayPlaceholder: 'rgba(24, 28, 47, 0.3)', // 文字占位符颜色
   grayInput: '#181C2F', // 输入框文字颜色
 
-  normal: '1.4rem', // 常规字体大小
-  medium: '1.6rem', // 中等字体大小
+  // 字体大小
+  XXSmall: '0.8rem',
+  XSmall: '1rem',
+  small: '1.2rem',
+  normal: '1.4rem',
+  medium: '1.6rem',
+  large: '1.8rem',
+  XLarge: '2rem',
+  XXLarge: '2.4rem'
 }
