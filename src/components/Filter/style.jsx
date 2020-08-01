@@ -10,7 +10,7 @@ const Action = styled.div`
   justify-self: end;
   ${StyledText} {
     padding-right: 1rem;
-  }
+  };
 `
 
 // 过滤容器

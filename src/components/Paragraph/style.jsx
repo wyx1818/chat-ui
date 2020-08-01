@@ -10,7 +10,7 @@ const StyledParagraph = styled(StyledText)`
       white-space: nowrap;
       overflow: hidden;
     `
-}
+  };
 `
 
 export default StyledParagraph

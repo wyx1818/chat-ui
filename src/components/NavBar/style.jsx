@@ -19,8 +19,8 @@ const StyledMenuItem = styled.div`
     width: 100%;
     height: 74px;
 
-    ${ activeBarCss() }
-    ${ ({ active }) => active ? '' : '&::before, &::after {height: 0}'}
+    ${ activeBarCss() };
+    ${ ({ active }) => active ? '' : '&::before, &::after {height: 0}'};
   }
 `
 

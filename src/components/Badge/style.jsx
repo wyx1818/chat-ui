@@ -8,21 +8,24 @@ const variants = {
     padding: 5px;
 
     &::after {
-      display: ${ ({ show }) => (show ? 'block' : 'none') };
       content: '';
-      ${ ({ theme }) => circleCss(theme.red, '6px') };
       position: absolute;
       right: 0;
       top: 0;
+
+      display: ${ ({ show }) => (show ? 'block' : 'none') };
+      ${ ({ theme }) => circleCss(theme.red, '6px') };
+
     }
   `,
   default: css`
     display: flex;
     align-items: center;
     justify-content: center;
-    ${ ({ theme }) => circleCss(theme.red, '26px') };
     box-shadow: 0 18px 40px 0 rgba(0, 0, 0, 0.04),
       0 6px 12px 0 rgba(0, 0, 0, 0.08);
+
+    ${ ({ theme }) => circleCss(theme.red, '26px') };
     ${ ({ showZero, count }) => !showZero && count === 0 && 'visibility: hidden' };
   `
 }

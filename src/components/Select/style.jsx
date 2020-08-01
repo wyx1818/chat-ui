@@ -15,7 +15,7 @@ const StyledSelect = styled.select`
   // IE 隐藏
   ::-ms-expand {
     display: none;
-  }
+  };
 `
 
 export default StyledSelect

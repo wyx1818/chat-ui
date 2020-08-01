@@ -14,7 +14,7 @@ const circleMixinFunc = (color, size = '8px') => css`
 `
 
 // 头像最外层
-const StyleAvatar = styled.div`
+const StyledAvatar = styled.div`
   position: relative;
 `
 
@@ -57,6 +57,6 @@ const AvatarImage = styled.img`
   object-fit: cover;   // 等比例缩放填满容器
   object-position: center; // 在容器居中
 `
-export default StyleAvatar
+export default StyledAvatar
 
 export { StatusIcon, AvatarClip, AvatarImage }

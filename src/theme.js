@@ -1,6 +1,7 @@
 // 主题色配置
 
 export default {
+  // 颜色
   primaryColor: '#4F9DDE', // 主题主要色
   green: '#34D859', // 在线状态颜色
   gray: 'rgba(24, 28, 47, .2)', // 灰色
@@ -9,6 +10,9 @@ export default {
   grayBG: 'rgba(241, 237, 237, 0.3)', // 灰色背景
   grayPlaceholder: 'rgba(24, 28, 47, 0.3)', // 文字占位符颜色
   grayDark: '#181C2F',
+  background: 'white',
+  inactiveColor: 'rgba(41, 47, 76, 0.3)',
+  inactiveColorDark: 'white',
 
   // 字体大小
   XXSmall: '0.8rem',
