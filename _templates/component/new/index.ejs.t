@@ -5,13 +5,13 @@ to: src/components/<%= name %>/index.jsx
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Style<%= name %> from './style'
+import Styled<%= name %> from './style'
 
 function <%= name %> ({ children, ...rest }) {
   return (
-    <Style<%= name %> { ...rest }>
+    <Styled<%= name %> { ...rest }>
       {children}
-    </Style<%= name %>>
+    </Styled<%= name %>>
   )
 }
 

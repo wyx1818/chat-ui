@@ -3,6 +3,16 @@ import PropTypes from 'prop-types'
 
 import StyledBadge, { Count } from './style'
 
+/**
+ * UI 组件/徽章
+ * @param children
+ * @param show 是否显示
+ * @param count 显示数字
+ * @param showZero 是否显示0
+ * @param rest
+ * @returns {JSX.Element}
+ * @constructor
+ */
 function Badge ({
     children,
     show = false,

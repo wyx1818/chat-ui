@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { circleCss } from '../../utils/mixins'
 
+// 变体，dot || default
 const variants = {
   dot: css`
     position: relative;
@@ -26,11 +27,13 @@ const variants = {
   `
 }
 
+// 最外层容器
 const StyledBadge = styled.div`
   display: inline-block;
   ${ ({ variant }) => variants[variant] }
 `
 
+// 数量
 const Count = styled.div`
   font-size: ${ ({ theme }) => theme.normal };
   color: white;

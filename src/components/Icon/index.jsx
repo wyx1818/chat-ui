@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import StyledIcon from './style'
 
 /**
- *
+ * UI 组件/图标
  * @param IconComponent
  * @param width 图标宽度
  * @param height 图标高度
