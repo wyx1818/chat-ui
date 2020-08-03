@@ -36,39 +36,37 @@ const StyledChatBubble = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${ ({ type }) => type && typeVariants[type] }
+  ${({ type }) => type && typeVariants[type]}
 `
 
 // 气泡变体
 const typeVariants = {
   mine: css`
     ${Bubble} {
-      background-color: ${ ({ theme }) => theme.primaryColor };
-    };
+      background-color: ${({ theme }) => theme.primaryColor};
+    }
 
     ${BubbleTip} {
       transform: rotateY(180deg);
       left: unset;
       right: 0;
-    };
+    }
 
-    // 修改 svg 的填充色
     path {
-      fill: ${ ({ theme }) => theme.primaryColor };
-    };
+      fill: ${({ theme }) => theme.primaryColor};
+    }
 
     ${Time} {
       text-align: right;
       margin-left: 0;
       margin-right: 24px;
-    };
+    }
 
     ${MessageText} {
-    color: white;
-    };
+      color: white;
+    }
   `
 }
-
 
 export default StyledChatBubble
 

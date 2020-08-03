@@ -24,7 +24,7 @@ export const Default = () => (
 
     <Filter.Action label="创建会话">
       <Button>
-        <Icon icon={ Plus } width={ 12 } height={ 12 }/>
+        <Icon icon={Plus} width={12} height={12} />
       </Button>
     </Filter.Action>
   </Filter>

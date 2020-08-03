@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react'
 
-import Conversation from "."
+import Conversation from '.'
 
 export default {
-  title: "页面组件/Conversation",
+  title: '页面组件/Conversation',
   component: Conversation
 }
 
-export const Default = () => <Conversation/>
+export const Default = () => <Conversation />

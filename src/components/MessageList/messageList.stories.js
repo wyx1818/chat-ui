@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react'
 
-import MessageList from "."
+import MessageList from '.'
 
 export default {
-  title: "页面组件/MessageList",
+  title: '页面组件/MessageList',
   component: MessageList
 }
 

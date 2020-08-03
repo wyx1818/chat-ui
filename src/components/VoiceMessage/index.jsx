@@ -19,22 +19,22 @@ import Text from '../Text'
  * @returns {JSX.Element}
  * @constructor
  */
-function VoiceMessage ({ children, time, type, ...rest }) {
+function VoiceMessage({ children, time, type, ...rest }) {
   const theme = useTheme()
 
   return (
-    <StyledVoiceMessage type={ type } { ...rest }>
+    <StyledVoiceMessage type={type} {...rest}>
       <Button size="40px">
         <Icon
-          icon={ Play }
-          color='white'
-          width={ 14 }
-          height={ 16 }
-          style={ { transform: 'translateX(1px)' } }
+          icon={Play}
+          color="white"
+          width={14}
+          height={16}
+          style={{ transform: 'translateX(1px)' }}
         />
       </Button>
-      <Icon icon={ Wave } width="100%" height="100%" color={ theme.primaryColor }/>
-      <Text bold>{ time }</Text>
+      <Icon icon={Wave} width="100%" height="100%" color={theme.primaryColor} />
+      <Text bold>{time}</Text>
     </StyledVoiceMessage>
   )
 }

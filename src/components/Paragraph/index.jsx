@@ -11,10 +11,10 @@ import StyledParagraph from './style'
  * @returns {JSX.Element}
  * @constructor
  */
-function Paragraph ({ children, ellipsis, ...rest }) {
+function Paragraph({ children, ellipsis, ...rest }) {
   return (
-    <StyledParagraph as="p" ellipsis={ ellipsis } { ...rest }>
-      { children }
+    <StyledParagraph as="p" ellipsis={ellipsis} {...rest}>
+      {children}
     </StyledParagraph>
   )
 }

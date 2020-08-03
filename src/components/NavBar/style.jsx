@@ -19,8 +19,8 @@ const StyledMenuItem = styled.div`
     width: 100%;
     height: 74px;
 
-    ${ activeBarCss() };
-    ${ ({ active }) => active ? '' : '&::before, &::after {height: 0}'};
+    ${activeBarCss()};
+    ${({ active }) => (active ? '' : '&::before, &::after {height: 0}')};
   }
 `
 
@@ -28,7 +28,7 @@ const StyledMenuItem = styled.div`
 const MenuIcon = styled(FontAwesomeIcon)`
   color: white;
   font-size: 24px;
-  opacity: ${ ({ active }) => active ? 1 : 0.3 };
+  opacity: ${({ active }) => (active ? 1 : 0.3)};
 `
 
 // 侧导航
@@ -37,14 +37,14 @@ const StyledNavBar = styled.nav`
   grid-template-rows: 1fr 4fr;
   width: 100px;
   height: 100%;
-  background-color: ${ ({ theme }) => theme.darkPurple };
+  background-color: ${({ theme }) => theme.darkPurple};
   padding: 30px 0;
 
   ${StyledAvatar} {
     justify-self: center;
     ${StatusIcon} {
       &::before {
-      background-color: ${ ({ theme}) => theme.darkPurple };
+        background-color: ${({ theme }) => theme.darkPurple};
       }
     }
   }

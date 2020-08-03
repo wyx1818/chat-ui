@@ -11,28 +11,21 @@ import { ReactComponent as Call } from 'assets/icons/call.svg'
 import { ReactComponent as Camera } from 'assets/icons/camera.svg'
 import { ReactComponent as Options } from 'assets/icons/options.svg'
 
-function TitleBar ({
-  avatarSrc,
-  name,
-  status,
-  time,
-  children,
-  ...rest
-}) {
+function TitleBar({ avatarSrc, name, status, time, children, ...rest }) {
   return (
-    <StyledTitleBar { ...rest }>
-      <Avatar src={ avatarSrc } status="online"/>
+    <StyledTitleBar {...rest}>
+      <Avatar src={avatarSrc} status="online" />
       <Title>
-        <Paragraph size="large">{ name }</Paragraph>
-        <Paragraph type='secondary'>
-          <Text>{ status === 'online' ? '在线' : '离线' }</Text>
-          <Text> 最后阅读时间: { time }</Text>
+        <Paragraph size="large">{name}</Paragraph>
+        <Paragraph type="secondary">
+          <Text>{status === 'online' ? '在线' : '离线'}</Text>
+          <Text> 最后阅读时间: {time}</Text>
         </Paragraph>
       </Title>
       <Actions>
-        <Icon icon={ Call } opacity={0.3}/>
-        <Icon icon={Camera} opacity={0.3}/>
-        <Icon icon={Options} opacity={0.3}/>
+        <Icon icon={Call} opacity={0.3} />
+        <Icon icon={Camera} opacity={0.3} />
+        <Icon icon={Options} opacity={0.3} />
       </Actions>
     </StyledTitleBar>
   )

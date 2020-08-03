@@ -7,7 +7,7 @@ const IconContainer = styled.div`
   margin-right: -30px;
 
   & > * {
-  margin-left: 16px;
+    margin-left: 16px;
   }
 `
 // 弹出层样式

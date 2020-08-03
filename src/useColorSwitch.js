@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function useColorSwitch(color1 = '#ff0000', color2 ='#00ff00') {
+function useColorSwitch(color1 = '#ff0000', color2 = '#00ff00') {
   const [color, setColor] = useState(color1)
 
   const handleButton1Click = () => {

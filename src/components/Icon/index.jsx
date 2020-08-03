@@ -15,17 +15,17 @@ import SocialIcon from './SocialIcon'
  * @returns {JSX.Element}
  * @constructor
  */
-function Icon ({
-    icon: IconComponent,
-    width = 24,
-    height = 24,
-    color,
-    opacity,
-    ...rest
-  }) {
+function Icon({
+  icon: IconComponent,
+  width = 24,
+  height = 24,
+  color,
+  opacity,
+  ...rest
+}) {
   return (
-    <StyledIcon color={ color } opacity={ opacity } { ...rest }>
-      { IconComponent && <IconComponent width={ width } height={ height }/> }
+    <StyledIcon color={color} opacity={opacity} {...rest}>
+      {IconComponent && <IconComponent width={width} height={height} />}
     </StyledIcon>
   )
 }

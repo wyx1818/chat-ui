@@ -14,7 +14,7 @@ import StyledPopover, { Content, Target, Triangle } from './style'
  * @returns {JSX.Element}
  * @constructor
  */
-function Popover ({
+function Popover({
   children,
   content,
   offset = {},
@@ -35,12 +35,12 @@ function Popover ({
   }
 
   return (
-    <StyledPopover onClick={ handleClick } { ...rest }>
-      <Content offset={ offset } visible={ visible }>
-        { content }
+    <StyledPopover onClick={handleClick} {...rest}>
+      <Content offset={offset} visible={visible}>
+        {content}
       </Content>
-      <Triangle offset={ offset } visible={ visible }/>
-      <Target>{ children }</Target>
+      <Triangle offset={offset} visible={visible} />
+      <Target>{children}</Target>
     </StyledPopover>
   )
 }

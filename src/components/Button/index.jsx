@@ -14,23 +14,23 @@ import StyledButton from './style'
  * @returns {JSX.Element}
  * @constructor
  */
-function Button ({
-    children,
-    type = 'primary',
-    shape = 'circle',
-    diameter = '30px',
-    bgColor,
-    ...rest
-  }) {
+function Button({
+  children,
+  type = 'primary',
+  shape = 'circle',
+  diameter = '30px',
+  bgColor,
+  ...rest
+}) {
   return (
     <StyledButton
-      type={ type }
-      shape={ shape }
-      diameter={ diameter }
-      bgColor={ bgColor }
-      { ...rest }
+      type={type}
+      shape={shape}
+      diameter={diameter}
+      bgColor={bgColor}
+      {...rest}
     >
-      { children }
+      {children}
     </StyledButton>
   )
 }

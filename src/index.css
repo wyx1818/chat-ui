@@ -1,5 +1,5 @@
 /*全局样式*/
-@import "reset.css";
+@import 'reset.css';
 
 html {
   /*1rem = 10px*/
@@ -20,6 +20,8 @@ code {
     monospace;
 }
 
-input, button, select {
+input,
+button,
+select {
   outline: none;
 }

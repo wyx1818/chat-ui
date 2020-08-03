@@ -15,7 +15,6 @@ import { ReactComponent as MicrophoneIcon } from 'assets/icons/microphone.svg'
 import { ReactComponent as PlaneIcon } from 'assets/icons/plane.svg'
 import { ReactComponent as OptionsIcon } from 'assets/icons/options.svg'
 
-
 /**
  * 聊天底部栏
  * @param children
@@ -23,33 +22,33 @@ import { ReactComponent as OptionsIcon } from 'assets/icons/options.svg'
  * @returns {JSX.Element}
  * @constructor
  */
-function Footer ({ children, ...rest }) {
+function Footer({ children, ...rest }) {
   const [emojiIconActive, setEmojiIconActive] = useState(false)
   const theme = useTheme()
   return (
-    <StyledFooter { ...rest }>
+    <StyledFooter {...rest}>
       <Input
         placeholder="输入想和对方说的话"
-        prefixIcon={ <Icon icon={ Clip }/> }
+        prefixIcon={<Icon icon={Clip} />}
         suffixIcon={
           <IconContainer>
             <Popover
-              content={ <PopoverContent/> }
-              offset={ { x: '-25%' } }
-              onVisible={ () => setEmojiIconActive(true) }
-              onHide={ () => setEmojiIconActive(false) }
+              content={<PopoverContent />}
+              offset={{ x: '-25%' }}
+              onVisible={() => setEmojiIconActive(true)}
+              onHide={() => setEmojiIconActive(false)}
             >
               <Icon
-                icon={ SmileIcon }
-                color={ emojiIconActive ? undefined : theme.inactiveColor }
+                icon={SmileIcon}
+                color={emojiIconActive ? undefined : theme.inactiveColor}
               />
             </Popover>
-            <Icon icon={ MicrophoneIcon }/>
+            <Icon icon={MicrophoneIcon} />
             <Button diameter="52px">
               <Icon
-                icon={ PlaneIcon }
+                icon={PlaneIcon}
                 color="white"
-                style={ { transform: 'translateX(-2px)' } }
+                style={{ transform: 'translateX(-2px)' }}
               />
             </Button>
           </IconContainer>
@@ -59,10 +58,11 @@ function Footer ({ children, ...rest }) {
   )
 }
 
-{/* eslint-disable jsx-a11y/accessible-emoji */
+{
+  /* eslint-disable jsx-a11y/accessible-emoji */
 }
 
-function PopoverContent (props) {
+function PopoverContent(props) {
   return (
     <StyledPopoverContent>
       <Emoji label="smile">😊</Emoji>
@@ -73,11 +73,10 @@ function PopoverContent (props) {
       <Emoji label="handsputtogether">🙏</Emoji>
       <Emoji label="smilewithsunglasses">😎</Emoji>
       <Emoji label="flexedbicep">💪</Emoji>
-      <Icon icon={ OptionsIcon } style={ { marginLeft: '24px' } }/>
+      <Icon icon={OptionsIcon} style={{ marginLeft: '24px' }} />
     </StyledPopoverContent>
   )
 }
-
 
 Footer.propTypes = {
   children: PropTypes.any

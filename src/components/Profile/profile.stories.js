@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react'
 
-import Profile from "."
+import Profile from '.'
 
 export default {
-  title: "页面组件/Profile",
+  title: '页面组件/Profile',
   component: Profile
 }
 
-export const Default = () => <Profile/>
+export const Default = () => <Profile />

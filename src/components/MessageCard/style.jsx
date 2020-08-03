@@ -8,7 +8,7 @@ import StyledAvatar from '../Avatar/style'
 
 // 昵称
 const Name = styled(Text).attrs({ size: 'large' })`
- grid-area: name;
+  grid-area: name;
 `
 
 // 时间
@@ -28,12 +28,11 @@ const Message = styled.div`
   display: grid;
   grid-template-columns: 1fr 30px;
   align-items: center;
-  ${ ({ replied }) =>
+  ${({ replied }) =>
     replied &&
     css`
       grid-template-columns: 24px 1fr 30px;
-    `
-  };
+    `};
 `
 
 // 详细文本
@@ -46,41 +45,40 @@ const UnreadBadge = styled(Badge)`
 
 // 消息卡片容器
 const StyledMessageCard = styled.div`
-  ${ cardCss() };
+  ${cardCss()};
   display: grid;
   grid-template-areas:
-    "avatar name time"
-    "avatar status status"
-    "message message message";
+    'avatar name time'
+    'avatar status status'
+    'message message message';
   grid-template-columns: 64px 1fr 1fr;
   row-gap: 16px;
-  background-color: ${ ({ theme }) => theme.background };
+  background-color: ${({ theme }) => theme.background};
   transition: 0.4s;
 
   &:hover {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-  };
+  }
 
-  ${ StyledAvatar } {
+  ${StyledAvatar} {
     grid-area: avatar;
-  };
+  }
 
-  // 激活状态
-  ${ ({ active }) =>
-  active &&
-  css`
-    background-color: ${ ({ theme }) => theme.darkPurple };
-    ${ Name }, ${ Status }, ${ Time }, ${ MessageText } {
+  /*激活状态*/
+  ${({ active }) =>
+    active &&
+    css`
+    background-color: ${({ theme }) => theme.darkPurple};
+    ${Name}, ${Status}, ${Time}, ${MessageText} {
       color: white;
     };
-    ${ Status }, ${ Time } {
+    ${Status}, ${Time} {
       opacity: 0.4;
     };
-    ${ activeBarCss({ barWidth: '4px', shadowWidth: '14px' }) };
+    ${activeBarCss({ barWidth: '4px', shadowWidth: '14px' })};
 
     overflow: hidden;
-    `
-  }
+    `}
 `
 
 export default StyledMessageCard

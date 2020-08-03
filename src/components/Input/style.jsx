@@ -7,10 +7,10 @@ const StyledInput = styled.input`
   height: 48px;
   border: none;
   background: none;
-  color: ${ ({ theme }) => theme.grayDark };
-  font-size: ${ ({ theme }) => theme.medium };
+  color: ${({ theme }) => theme.grayDark};
+  font-size: ${({ theme }) => theme.medium};
   &::placeholder {
-    color: ${ ({ theme }) => theme.grayPlaceholder };
+    color: ${({ theme }) => theme.grayPlaceholder};
   }
 `
 
@@ -18,7 +18,7 @@ const StyledInput = styled.input`
 const InputContainer = styled.div`
   display: flex;
   align-items: center;
-  background-color: ${ ({ theme }) => theme.grayBG };
+  background-color: ${({ theme }) => theme.grayBG};
   border-radius: 24px;
   padding: 0 30px;
 `

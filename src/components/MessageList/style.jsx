@@ -5,7 +5,7 @@ import StyledMessageCard from '../MessageCard/style'
 const ChartLIst = styled.div`
   ${StyledMessageCard} {
     margin-bottom: 20px;
-  };
+  }
 `
 
 const StyledMessageList = styled.div``

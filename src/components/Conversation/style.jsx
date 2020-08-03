@@ -26,14 +26,13 @@ const StyledConversation = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  border: 1px solid ${ ({ theme}) => theme.grayBorder };
+  border: 1px solid ${({ theme }) => theme.grayBorder};
 
   & > *:last-child {
     align-self: end;
   }
-
 `
 
 export default StyledConversation
 
-export { Conversations, MyChatBubble}
+export { Conversations, MyChatBubble }

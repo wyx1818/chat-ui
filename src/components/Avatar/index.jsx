@@ -13,12 +13,18 @@ import StyledAvatar, { AvatarClip, AvatarImage, StatusIcon } from './style'
  * @returns {JSX.Element}
  * @constructor
  */
-function Avatar ({ src, size = '48px', status, statusIconSize = '8px', ...rest }) {
+function Avatar({
+  src,
+  size = '48px',
+  status,
+  statusIconSize = '8px',
+  ...rest
+}) {
   return (
-    <StyledAvatar { ...rest }>
-      { status && <StatusIcon status={ status } size={ statusIconSize }/> }
-      <AvatarClip size={ size }>
-        <AvatarImage src={ src } alt=""/>
+    <StyledAvatar {...rest}>
+      {status && <StatusIcon status={status} size={statusIconSize} />}
+      <AvatarClip size={size}>
+        <AvatarImage src={src} alt="" />
       </AvatarClip>
     </StyledAvatar>
   )

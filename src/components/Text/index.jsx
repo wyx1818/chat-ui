@@ -13,10 +13,10 @@ import StyledText from './style'
  * @returns {JSX.Element}
  * @constructor
  */
-function Text ({ children, type = 'primary', size = 'normal', bold, ...rest }) {
+function Text({ children, type = 'primary', size = 'normal', bold, ...rest }) {
   return (
-    <StyledText type={ type } size={ size } bold={ bold } { ...rest }>
-      { children }
+    <StyledText type={type} size={size} bold={bold} {...rest}>
+      {children}
     </StyledText>
   )
 }

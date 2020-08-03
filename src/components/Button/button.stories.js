@@ -10,10 +10,10 @@ export default {
   component: Button
 }
 
-export const RectButton = () => <Button shape='rect'>默认按钮</Button>
+export const RectButton = () => <Button shape="rect">默认按钮</Button>
 
 export const CircleButton = () => (
   <Button>
-    <Icon icon={ Plus } width={ 12 } height={ 12 }/>
+    <Icon icon={Plus} width={12} height={12} />
   </Button>
 )

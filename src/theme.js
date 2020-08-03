@@ -10,7 +10,7 @@ export default {
   grayBG: 'rgba(241, 237, 237, 0.3)', // 灰色背景
   grayPlaceholder: 'rgba(24, 28, 47, 0.3)', // 文字占位符颜色
   grayDark: '#181C2F',
-  grayBorder:'#EfECE8', // 边框颜色
+  grayBorder: '#EfECE8', // 边框颜色
   background: 'white',
   inactiveColor: 'rgba(41, 47, 76, 0.3)',
   inactiveColorDark: 'white',

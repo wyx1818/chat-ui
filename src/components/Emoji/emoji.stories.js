@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react'
 
-import Emoji from "."
+import Emoji from '.'
 
 export default {
-  title: "UI 组件/Emoji",
+  title: 'UI 组件/Emoji',
   component: Emoji
 }
 

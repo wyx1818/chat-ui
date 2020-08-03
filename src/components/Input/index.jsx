@@ -15,12 +15,17 @@ import { useTheme } from 'styled-components'
  * @returns {JSX.Element}
  * @constructor
  */
-function Input ({ placeholder = '请输入内容', prefixIcon, suffixIcon, ...rest }) {
+function Input({
+  placeholder = '请输入内容',
+  prefixIcon,
+  suffixIcon,
+  ...rest
+}) {
   return (
-    <InputContainer { ...rest }>
-      { prefixIcon && <Prefix>{ prefixIcon }</Prefix> }
-      <StyledInput placeholder={ placeholder }/>
-      { suffixIcon && <Suffix>{ suffixIcon }</Suffix> }
+    <InputContainer {...rest}>
+      {prefixIcon && <Prefix>{prefixIcon}</Prefix>}
+      <StyledInput placeholder={placeholder} />
+      {suffixIcon && <Suffix>{suffixIcon}</Suffix>}
     </InputContainer>
   )
 }
@@ -32,16 +37,16 @@ function Input ({ placeholder = '请输入内容', prefixIcon, suffixIcon, ...re
  * @returns {JSX.Element}
  * @constructor
  */
-function Search ({ placeholder = '请输入内容', ...rest }) {
+function Search({ placeholder = '请输入内容', ...rest }) {
   const theme = useTheme()
   return (
     <Input
-      placeholder={ placeholder }
-      prefixIcon={ <Icon icon={ SearchIcon } width={ 18 } height={ 18 } color={ theme.grayDark }/> }
-      { ...rest }
-    >
-
-    </Input>
+      placeholder={placeholder}
+      prefixIcon={
+        <Icon icon={SearchIcon} width={18} height={18} color={theme.grayDark} />
+      }
+      {...rest}
+    ></Input>
   )
 }
 

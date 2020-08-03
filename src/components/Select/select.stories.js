@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react'
 
-import Select from "."
+import Select from '.'
 import Option from '../Option'
 
 export default {
-  title: "UI 组件/Input/Select",
+  title: 'UI 组件/Input/Select',
   component: Select
 }
 

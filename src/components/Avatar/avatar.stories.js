@@ -14,17 +14,18 @@ export default {
 export const Default = () => {
   return (
     <div className="row-element">
-      <Avatar src={ face1 }/>
-    </div>)
+      <Avatar src={face1} />
+    </div>
+  )
 }
 
 export const Sizes = () => {
   return (
     <div className="row-element">
-      <Avatar src={ face1 } size="48px"/>
-      <Avatar src={ face2 } size="56px"/>
-      <Avatar src={ face3 } size="64px"/>
-      <Avatar src={ face4 } size="72px"/>
+      <Avatar src={face1} size="48px" />
+      <Avatar src={face2} size="56px" />
+      <Avatar src={face3} size="64px" />
+      <Avatar src={face4} size="72px" />
     </div>
   )
 }
@@ -32,9 +33,9 @@ export const Sizes = () => {
 export const WithStatus = () => {
   return (
     <div className="row-element">
-      <Avatar src={ face1 } status="online"/>
-      <Avatar src={ face2 } status="offline"/>
-      <Avatar src={ face3 } status="online" size="72px" statusIconSize="12px"/>
+      <Avatar src={face1} status="online" />
+      <Avatar src={face2} status="offline" />
+      <Avatar src={face3} status="online" size="72px" statusIconSize="12px" />
     </div>
   )
 }

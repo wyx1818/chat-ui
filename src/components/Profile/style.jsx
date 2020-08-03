@@ -21,19 +21,19 @@ const AlbumSection = styled.section``
 
 // 相册标题
 const AlbumTitle = styled.div`
-  justify-self: stretch; // 占据整个grid宽度
+  justify-self: stretch; /*占据整个grid宽度*/
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   & > a {
     text-decoration: none;
-    font-size: ${ ({ theme }) => theme.normal };
-    color: ${ ({ theme }) => theme.primaryColor };
+    font-size: ${({ theme }) => theme.normal};
+    color: ${({ theme }) => theme.primaryColor};
 
     &::after {
       display: inline-block;
-      content: url(${ arrowRight });
+      content: url(${arrowRight});
       margin-left: 2px;
     }
   }
@@ -57,7 +57,7 @@ const Photo = styled.img`
 `
 
 // 关闭按钮
-const CloseIcon = styled(Icon).attrs({opacity: 0.3})`
+const CloseIcon = styled(Icon).attrs({ opacity: 0.3 })`
   position: absolute;
   right: 30px;
   top: 30px;
@@ -79,4 +79,12 @@ const StyledProfile = styled.div`
 
 export default StyledProfile
 
-export { SocialLinks, ContactSection, Album, AlbumSection, AlbumTitle, Photo,CloseIcon }
+export {
+  SocialLinks,
+  ContactSection,
+  Album,
+  AlbumSection,
+  AlbumTitle,
+  Photo,
+  CloseIcon
+}

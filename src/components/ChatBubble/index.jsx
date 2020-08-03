@@ -14,14 +14,14 @@ import { ReactComponent as BubbleTipIcon } from 'assets/icons/bubbleTip.svg'
  * @returns {JSX.Element}
  * @constructor
  */
-function ChatBubble ({ children, type, time, ...rest }) {
+function ChatBubble({ children, type, time, ...rest }) {
   return (
-    <StyledChatBubble type={ type } { ...rest }>
+    <StyledChatBubble type={type} {...rest}>
       <Bubble>
-        <BubbleTip icon={ BubbleTipIcon } width={ 40 } height={ 28 } color="white"/>
-        <MessageText>{ children }</MessageText>
+        <BubbleTip icon={BubbleTipIcon} width={40} height={28} color="white" />
+        <MessageText>{children}</MessageText>
       </Bubble>
-      <Time>{ time }</Time>
+      <Time>{time}</Time>
     </StyledChatBubble>
   )
 }
@@ -29,7 +29,7 @@ function ChatBubble ({ children, type, time, ...rest }) {
 ChatBubble.propTypes = {
   children: PropTypes.any,
   type: PropTypes.oneOf(['mine']),
-  time: PropTypes.string,
+  time: PropTypes.string
 }
 
 export default ChatBubble

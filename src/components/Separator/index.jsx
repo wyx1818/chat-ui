@@ -3,12 +3,8 @@ import PropTypes from 'prop-types'
 
 import StyledSeparator from './style'
 
-function Separator ({ children, ...rest }) {
-  return (
-    <StyledSeparator { ...rest }>
-      {children}
-    </StyledSeparator>
-  )
+function Separator({ children, ...rest }) {
+  return <StyledSeparator {...rest}>{children}</StyledSeparator>
 }
 
 Separator.propTypes = {

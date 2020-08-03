@@ -11,13 +11,13 @@ export default {
   component: Input
 }
 
-export const Default = () => <Input/>
+export const Default = () => <Input />
 
-export const Search = () => <Input.Search/>
+export const Search = () => <Input.Search />
 
 export const WithAffix = () => (
   <Input
-    prefixIcon={ <Icon icon={ ClipIcon } color="#ccc"/> }
-    suffixIcon={ <Icon icon={ SmileIcon } color="#ccc"/> }
+    prefixIcon={<Icon icon={ClipIcon} color="#ccc" />}
+    suffixIcon={<Icon icon={SmileIcon} color="#ccc" />}
   />
 )

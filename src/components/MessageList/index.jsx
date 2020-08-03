@@ -13,34 +13,34 @@ import MessageCard from '../MessageCard'
 import { ReactComponent as Plus } from 'assets/icons/plus.svg'
 import face1 from 'assets/images/face-female-2.jpg'
 
-function MessageList ({ children, ...rest }) {
+function MessageList({ children, ...rest }) {
   return (
-    <StyledMessageList { ...rest }>
-      <Input.Search/>
-      <ChatFilter/>
+    <StyledMessageList {...rest}>
+      <Input.Search />
+      <ChatFilter />
       <ChartLIst>
-        { [1, 2, 3, 4, 5, 6].map((_, index) => (
+        {[1, 2, 3, 4, 5, 6].map((_, index) => (
           <MessageCard
-            key={ index }
-            active={ index === 3 }
-            replied={ index % 3 === 0 }
-            avatarSrc={ face1 }
+            key={index}
+            active={index === 3}
+            replied={index % 3 === 0}
+            avatarSrc={face1}
             name="李荣浩"
             avatarStatus="online"
             statusText="在线"
             time="3 小时之前"
             message="芜湖啦，没有关系"
-            unreadCount={ 2 }
+            unreadCount={2}
           />
-        )) }
+        ))}
       </ChartLIst>
     </StyledMessageList>
   )
 }
 
-function ChatFilter () {
+function ChatFilter() {
   return (
-    <Filter style={ { padding: '20px 0' } }>
+    <Filter style={{ padding: '20px 0' }}>
       <Filter.Filters label="列表排序">
         <Select>
           <Option>最新消息优先</Option>
@@ -50,7 +50,7 @@ function ChatFilter () {
 
       <Filter.Action label="创建会话">
         <Button>
-          <Icon icon={ Plus } width={ 12 } height={ 12 }/>
+          <Icon icon={Plus} width={12} height={12} />
         </Button>
       </Filter.Action>
     </Filter>

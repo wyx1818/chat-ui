@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 
 import StyledEmoji from './style'
 
-function Emoji ({ children, label, ...rest }) {
+function Emoji({ children, label, ...rest }) {
   return (
-    <StyledEmoji role="img" aria-label={ label } { ...rest }>
-      { children }
+    <StyledEmoji role="img" aria-label={label} {...rest}>
+      {children}
     </StyledEmoji>
   )
 }
