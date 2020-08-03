@@ -2,20 +2,25 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import 'styled-components/macro'
 
-import StyledProfile, { ContactSection, SocialLinks } from './style'
+import StyledProfile, { Album, AlbumSection, AlbumTitle, CloseIcon, ContactSection, Photo, SocialLinks } from './style'
 import Avatar from '../Avatar'
 import Paragraph from '../Paragraph'
 import Icon from '../Icon'
-
-import face from 'assets/images/face-female-2.jpg'
-import Emoji from '../Emoji'
-import { faGithub, faLinkedin, faWeibo } from '@fortawesome/free-brands-svg-icons'
 import Separator from '../Separator'
 import Text from '../Text'
+import Emoji from '../Emoji'
+
+import { faGithub, faLinkedin, faWeibo } from '@fortawesome/free-brands-svg-icons'
+import { ReactComponent as Cross } from 'assets/icons/cross.svg'
+import face from 'assets/images/face-female-2.jpg'
+import photo1 from 'assets/images/1.jpg'
+import photo2 from 'assets/images/2.jpg'
+import photo3 from 'assets/images/3.jpg'
 
 function Profile ({ children, ...rest }) {
   return (
     <StyledProfile { ...rest }>
+      <CloseIcon icon={ Cross }/>
       <Avatar
         src={ face }
         size="160px"
@@ -68,6 +73,17 @@ function Profile ({ children, ...rest }) {
 
       <Separator style={ { margin: '30px 0' } }/>
 
+      <AlbumSection>
+        <AlbumTitle>
+          <Text type="secondary">相册（31）</Text>
+          <a>查看全部</a>
+        </AlbumTitle>
+        <Album>
+          <Photo src={ photo1 }/>
+          <Photo src={ photo2 }/>
+          <Photo src={ photo3 }/>
+        </Album>
+      </AlbumSection>
     </StyledProfile>
   )
 }
