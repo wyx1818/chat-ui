@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { ReactComponent as arrowRight } from 'assets/icons/arrowRight.svg'
+import arrowRight from 'assets/icons/arrowRight.svg'
 import Icon from '../Icon'
 
 // 布局社交图标
@@ -34,7 +34,7 @@ const AlbumTitle = styled.div`
     &::after {
       display: inline-block;
       content: url(${ arrowRight });
-      margin-right: 2px;
+      margin-left: 2px;
     }
   }
 `
