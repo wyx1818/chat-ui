@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['react-app', 'plugin:prettier/recommended', 'prettier'],
+  extends: ['react-app'],
   parserOptions: {
     sourceType: 'module',
     ecmaFeatures: {

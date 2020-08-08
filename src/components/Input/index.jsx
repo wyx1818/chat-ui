@@ -5,6 +5,7 @@ import Icon from 'components/Icon'
 import StyledInput, { InputContainer, Prefix, Suffix } from './style'
 import { ReactComponent as SearchIcon } from 'assets/icons/search.svg'
 import { useTheme } from 'styled-components'
+import InputText from './InputText'
 
 /**
  * 输入框组件
@@ -46,7 +47,7 @@ function Search({ placeholder = '请输入内容', ...rest }) {
         <Icon icon={SearchIcon} width={18} height={18} color={theme.grayDark} />
       }
       {...rest}
-    ></Input>
+    />
   )
 }
 
@@ -58,5 +59,6 @@ Input.propTypes = {
 
 // 将 Search 作为自组件导出
 Input.Search = Search
+Input.Text = InputText
 
 export default Input
