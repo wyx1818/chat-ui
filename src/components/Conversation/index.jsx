@@ -34,7 +34,7 @@ function Conversation({ children, ...rest }) {
 }
 
 Conversation.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 }
 
 export default Conversation

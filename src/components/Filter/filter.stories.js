@@ -10,7 +10,7 @@ import { ReactComponent as Plus } from 'assets/icons/plus.svg'
 
 export default {
   title: 'UI 组件/Filter',
-  component: Filter
+  component: Filter,
 }
 
 export const Default = () => (

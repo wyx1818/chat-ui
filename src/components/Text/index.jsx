@@ -32,9 +32,9 @@ Text.propTypes = {
     'medium',
     'large',
     'XLarge',
-    'XXLarge'
+    'XXLarge',
   ]),
-  bold: PropTypes.bool
+  bold: PropTypes.bool,
 }
 
 export default Text

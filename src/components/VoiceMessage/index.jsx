@@ -42,7 +42,7 @@ function VoiceMessage({ children, time, type, ...rest }) {
 VoiceMessage.propTypes = {
   children: PropTypes.any,
   type: PropTypes.oneOf(['mine']),
-  time: PropTypes.string
+  time: PropTypes.string,
 }
 
 export default VoiceMessage

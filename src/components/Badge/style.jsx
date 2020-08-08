@@ -27,7 +27,7 @@ const variants = {
     ${({ theme }) => circleCss(theme.red, '26px')};
     ${({ showZero, count }) =>
       !showZero && count === 0 && 'visibility: hidden'};
-  `
+  `,
 }
 
 // 最外层容器

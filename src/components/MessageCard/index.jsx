@@ -7,7 +7,7 @@ import StyledMessageCard, {
   Name,
   Status,
   Time,
-  UnreadBadge
+  UnreadBadge,
 } from './style'
 import Avatar from '../Avatar'
 import Icon from '../Icon'
@@ -61,7 +61,7 @@ function MessageCard({
             color={active ? theme.inactiveColorDark : theme.inactiveColor}
             opacity={active ? 0.4 : 1}
             style={{
-              justifyContent: 'start'
+              justifyContent: 'start',
             }}
           />
         )}
@@ -82,7 +82,7 @@ MessageCard.propTypes = {
   unreadCount: PropTypes.number,
   active: PropTypes.bool,
   replied: PropTypes.bool,
-  children: PropTypes.any
+  children: PropTypes.any,
 }
 
 export default MessageCard

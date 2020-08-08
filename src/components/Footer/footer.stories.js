@@ -4,7 +4,7 @@ import Footer from '.'
 
 export default {
   title: '页面组件/Footer',
-  component: Footer
+  component: Footer,
 }
 
 export const Default = () => (

@@ -6,7 +6,7 @@ import face1 from 'assets/images/face-female-2.jpg'
 
 export default {
   title: 'UI 组件/TitleBar',
-  component: TitleBar
+  component: TitleBar,
 }
 
 export const Default = () => (

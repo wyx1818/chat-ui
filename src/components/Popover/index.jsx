@@ -50,7 +50,7 @@ Popover.propTypes = {
   content: PropTypes.any,
   offset: PropTypes.shape({ x: PropTypes.string, y: PropTypes.string }),
   onVisible: PropTypes.func,
-  onHide: PropTypes.func
+  onHide: PropTypes.func,
 }
 
 export default Popover

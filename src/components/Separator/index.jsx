@@ -8,7 +8,7 @@ function Separator({ children, ...rest }) {
 }
 
 Separator.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 }
 
 export default Separator

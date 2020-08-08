@@ -6,7 +6,7 @@ import NavBar, { MenuItem } from '.'
 
 export default {
   title: '页面组件/NavBar',
-  component: NavBar
+  component: NavBar,
 }
 
 export const Default = () => <NavBar />

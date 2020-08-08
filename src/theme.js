@@ -23,5 +23,5 @@ export default {
   medium: '1.6rem',
   large: '1.8rem',
   XLarge: '2rem',
-  XXLarge: '2.4rem'
+  XXLarge: '2.4rem',
 }

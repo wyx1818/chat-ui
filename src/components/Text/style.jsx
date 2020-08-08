@@ -11,7 +11,7 @@ const typeVariants = {
   `,
   danger: css`
     color: ${({ theme }) => theme.red};
-  `
+  `,
 }
 
 // 尺寸变体
@@ -39,7 +39,7 @@ const sizeVariants = {
   `,
   XXLarge: css`
     ${({ theme }) => theme.XXLarge};
-  `
+  `,
 }
 // 文本容器
 const StyledText = styled.span`

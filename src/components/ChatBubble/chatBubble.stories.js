@@ -7,7 +7,7 @@ import Emoji from '../Emoji'
 export default {
   title: 'UI 组件/ChatBubble',
   component: ChatBubble,
-  decorators: [(storyFn) => <div style={{ padding: '24px' }}>{storyFn()}</div>]
+  decorators: [(storyFn) => <div style={{ padding: '24px' }}>{storyFn()}</div>],
 }
 
 export const FromOther = () => (

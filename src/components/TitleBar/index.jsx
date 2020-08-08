@@ -32,7 +32,7 @@ function TitleBar({ avatarSrc, name, status, time, children, ...rest }) {
 }
 
 TitleBar.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 }
 
 export default TitleBar

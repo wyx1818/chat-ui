@@ -3,5 +3,5 @@ module.exports = {
   tabWidth: 2,
   semi: false,
   singleQuote: true,
-  trailingComma: 'none'
+  // trailingComma: 'none' // 属性末尾加逗号
 }

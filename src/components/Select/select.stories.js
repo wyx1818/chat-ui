@@ -5,7 +5,7 @@ import Option from '../Option'
 
 export default {
   title: 'UI 组件/Input/Select',
-  component: Select
+  component: Select,
 }
 
 export const Default = () => (

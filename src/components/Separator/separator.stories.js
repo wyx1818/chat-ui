@@ -4,7 +4,7 @@ import Separator from '.'
 
 export default {
   title: 'UI 组件/Separator',
-  component: Separator
+  component: Separator,
 }
 
 export const Default = () => (

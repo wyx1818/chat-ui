@@ -4,7 +4,7 @@ import Paragraph from '.'
 
 export default {
   title: '排版/Paragraph',
-  component: Paragraph
+  component: Paragraph,
 }
 
 export const Default = () => (

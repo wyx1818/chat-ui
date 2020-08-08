@@ -14,11 +14,10 @@ export const circleCss = (color, size = '8px') => css`
 
 export const activeBarCss = ({
   barWidth = '8px',
-  shadowWidth = '20px'
+  shadowWidth = '20px',
 } = {}) => css`
   position: relative;
 
-  /*sc-selector*/
   &::before,
   &::after {
     display: block;

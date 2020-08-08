@@ -38,7 +38,7 @@ const typeVariants = {
     & > ${StyledText} {
       color: white;
     }
-  `
+  `,
 }
 
 export default StyledVoiceMessage

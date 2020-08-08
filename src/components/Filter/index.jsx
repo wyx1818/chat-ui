@@ -23,7 +23,7 @@ Filter.Action = ({ children, label, ...rest }) => (
 )
 
 Filter.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 }
 
 export default Filter

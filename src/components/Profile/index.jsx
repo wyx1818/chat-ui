@@ -9,7 +9,7 @@ import StyledProfile, {
   CloseIcon,
   ContactSection,
   Photo,
-  SocialLinks
+  SocialLinks,
 } from './style'
 import Avatar from '../Avatar'
 import Paragraph from '../Paragraph'
@@ -21,7 +21,7 @@ import Emoji from '../Emoji'
 import {
   faGithub,
   faLinkedin,
-  faWeibo
+  faWeibo,
 } from '@fortawesome/free-brands-svg-icons'
 import { ReactComponent as Cross } from 'assets/icons/cross.svg'
 import face from 'assets/images/face-female-2.jpg'
@@ -125,7 +125,7 @@ function Description({ label, children }) {
 }
 
 Profile.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 }
 
 export default Profile

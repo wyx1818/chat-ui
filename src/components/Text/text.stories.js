@@ -4,7 +4,7 @@ import Text from '.'
 
 export default {
   title: '排版/Text',
-  component: Text
+  component: Text,
 }
 
 export const Default = () => (

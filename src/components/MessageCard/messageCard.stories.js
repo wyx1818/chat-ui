@@ -6,7 +6,7 @@ import face1 from 'assets/images/face-female-2.jpg'
 
 export default {
   title: 'UI 组件/MessageCard',
-  component: MessageCard
+  component: MessageCard,
 }
 
 export const Default = () => (

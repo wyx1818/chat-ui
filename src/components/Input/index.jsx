@@ -53,7 +53,7 @@ function Search({ placeholder = '请输入内容', ...rest }) {
 Input.propTypes = {
   placeholder: PropTypes.string,
   prefixIcon: PropTypes.any,
-  suffixIcon: PropTypes.any
+  suffixIcon: PropTypes.any,
 }
 
 // 将 Search 作为自组件导出

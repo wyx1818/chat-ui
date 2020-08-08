@@ -34,7 +34,7 @@ Avatar.propTypes = {
   src: PropTypes.string.isRequired,
   size: PropTypes.string,
   status: PropTypes.oneOf(['online', 'offline']),
-  statusIconSize: PropTypes.string
+  statusIconSize: PropTypes.string,
 }
 
 export default Avatar

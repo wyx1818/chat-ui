@@ -8,7 +8,7 @@ import { ReactComponent as SmileIcon } from 'assets/icons/smile.svg'
 
 export default {
   title: 'UI 组件/Input',
-  component: Input
+  component: Input,
 }
 
 export const Default = () => <Input />

@@ -86,5 +86,5 @@ export {
   AlbumSection,
   AlbumTitle,
   Photo,
-  CloseIcon
+  CloseIcon,
 }

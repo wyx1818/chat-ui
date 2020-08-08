@@ -29,7 +29,7 @@ function ChatBubble({ children, type, time, ...rest }) {
 ChatBubble.propTypes = {
   children: PropTypes.any,
   type: PropTypes.oneOf(['mine']),
-  time: PropTypes.string
+  time: PropTypes.string,
 }
 
 export default ChatBubble

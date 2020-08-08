@@ -30,10 +30,10 @@ Paragraph.propTypes = {
     'medium',
     'large',
     'XLarge',
-    'XXLarge'
+    'XXLarge',
   ]),
   bold: PropTypes.bool,
-  ellipse: PropTypes.bool
+  ellipse: PropTypes.bool,
 }
 
 export default Paragraph

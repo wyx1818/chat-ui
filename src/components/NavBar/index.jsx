@@ -13,7 +13,7 @@ import {
   faEllipsisH,
   faFolder,
   faStickyNote,
-  faUsers
+  faUsers,
 } from '@fortawesome/free-solid-svg-icons'
 
 /**
@@ -69,7 +69,7 @@ NavBar.propTypes = {}
 MenuItem.prototype = {
   icon: PropTypes.elementType,
   active: PropTypes.bool,
-  showBadge: PropTypes.bool
+  showBadge: PropTypes.bool,
 }
 
 export default NavBar

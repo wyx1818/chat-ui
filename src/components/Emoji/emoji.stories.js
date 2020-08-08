@@ -4,7 +4,7 @@ import Emoji from '.'
 
 export default {
   title: 'UI 组件/Emoji',
-  component: Emoji
+  component: Emoji,
 }
 
 export const Default = () => (

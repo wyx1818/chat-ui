@@ -58,7 +58,7 @@ function ChatFilter() {
 }
 
 MessageList.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 }
 
 export default MessageList

@@ -35,7 +35,7 @@ Icon.propTypes = {
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   color: PropTypes.string,
-  opacity: PropTypes.number
+  opacity: PropTypes.number,
 }
 
 Icon.Social = SocialIcon

@@ -8,7 +8,7 @@ function Option({ children, ...rest }) {
 }
 
 Option.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 }
 
 export default Option

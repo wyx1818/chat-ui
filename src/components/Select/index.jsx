@@ -8,7 +8,7 @@ function Select({ children, ...rest }) {
 }
 
 Select.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 }
 
 export default Select

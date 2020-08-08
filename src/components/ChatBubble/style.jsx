@@ -65,7 +65,7 @@ const typeVariants = {
     ${MessageText} {
       color: white;
     }
-  `
+  `,
 }
 
 export default StyledChatBubble

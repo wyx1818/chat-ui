@@ -12,14 +12,14 @@ const shapeVariants = {
   rect: css`
     padding: 12px 18px;
     border-radius: 6px;
-  `
+  `,
 }
 
 const typeVariants = {
   primary: css`
     background-color: ${({ theme }) => theme.primaryColor};
     color: white;
-  `
+  `,
 }
 
 // 按钮

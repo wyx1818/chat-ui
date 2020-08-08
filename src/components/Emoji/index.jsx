@@ -13,7 +13,7 @@ function Emoji({ children, label, ...rest }) {
 
 Emoji.propTypes = {
   children: PropTypes.any,
-  label: PropTypes.string
+  label: PropTypes.string,
 }
 
 export default Emoji

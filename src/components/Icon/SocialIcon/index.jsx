@@ -20,7 +20,7 @@ function SocialIcon({ icon, bgColor, href, ...rest }) {
 SocialIcon.propTypes = {
   icon: PropTypes.elementType,
   bgColor: PropTypes.string,
-  href: PropTypes.string
+  href: PropTypes.string,
 }
 
 export default SocialIcon

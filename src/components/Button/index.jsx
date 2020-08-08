@@ -39,7 +39,7 @@ Button.propTypes = {
   children: PropTypes.any,
   type: PropTypes.oneOf(['primary']),
   shape: PropTypes.oneOf(['circle', 'rect']),
-  diameter: PropTypes.string
+  diameter: PropTypes.string,
 }
 
 export default Button

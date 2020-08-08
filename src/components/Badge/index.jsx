@@ -37,7 +37,7 @@ Badge.propTypes = {
   children: PropTypes.any,
   show: PropTypes.bool,
   shoeZero: PropTypes.bool,
-  count: PropTypes.number
+  count: PropTypes.number,
 }
 
 export default Badge

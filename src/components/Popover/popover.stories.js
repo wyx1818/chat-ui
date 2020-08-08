@@ -5,7 +5,7 @@ import Button from '../Button'
 
 export default {
   title: 'UI 组件/Popover',
-  component: Popover
+  component: Popover,
 }
 
 export const Default = () => (
@@ -14,7 +14,7 @@ export const Default = () => (
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '50vh'
+      height: '50vh',
     }}
   >
     <Popover content="Hello!">
@@ -29,7 +29,7 @@ export const WithOffset = () => (
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '50vh'
+      height: '50vh',
     }}
   >
     <Popover content="Hello!" offset={{ x: '-25%' }}>

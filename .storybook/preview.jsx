@@ -11,6 +11,6 @@ addDecorator((storyFn) => {
 
 addParameters({
   options: {
-    showRoots: true
-  }
+    showRoots: true,
+  },
 })
