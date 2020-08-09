@@ -96,7 +96,7 @@ function Profile({
           margin-bottom: 26px;
         `}
       >
-        {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+        {/* eslint-disable jsx-a11y/accessible-emoji */}
         帮助客户构建网站，并协助在社交网站上进行推广{' '}
         <Emoji label="fire">🔥</Emoji>
       </Paragraph>

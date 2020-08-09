@@ -2,58 +2,35 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import StyledMessageList, { ChartLIst } from './style'
-import Filter from '../Filter'
-import Select from '../Select'
-import Option from '../Option'
-import Button from '../Button'
-import Icon from '../Icon'
-import Input from '../Input'
 import MessageCard from '../MessageCard'
-
-import { ReactComponent as Plus } from 'assets/icons/plus.svg'
 import face1 from 'assets/images/face-female-2.jpg'
+import FilterList from '../FilterList'
 
 function MessageList({ children, ...rest }) {
   return (
     <StyledMessageList {...rest}>
-      <Input.Search />
-      <ChatFilter />
-      <ChartLIst>
-        {[1, 2, 3, 4, 5, 6].map((_, index) => (
-          <MessageCard
-            key={index}
-            active={index === 3}
-            replied={index % 3 === 0}
-            avatarSrc={face1}
-            name="李荣浩"
-            avatarStatus="online"
-            statusText="在线"
-            time="3 小时之前"
-            message="芜湖啦，没有关系"
-            unreadCount={2}
-          />
-        ))}
-      </ChartLIst>
+      <FilterList
+        options={['最新消息优先', '在线好友优先']}
+        actionLabel="创建会话"
+      >
+        <ChartLIst>
+          {[1, 2, 3, 4, 5, 6].map((_, index) => (
+            <MessageCard
+              key={index}
+              active={index === 3}
+              replied={index % 3 === 0}
+              avatarSrc={face1}
+              name="李荣浩"
+              avatarStatus="online"
+              statusText="在线"
+              time="3 小时之前"
+              message="芜湖啦，没有关系"
+              unreadCount={2}
+            />
+          ))}
+        </ChartLIst>
+      </FilterList>
     </StyledMessageList>
-  )
-}
-
-function ChatFilter() {
-  return (
-    <Filter style={{ padding: '20px 0' }}>
-      <Filter.Filters label="列表排序">
-        <Select>
-          <Option>最新消息优先</Option>
-          <Option>在线好友优先</Option>
-        </Select>
-      </Filter.Filters>
-
-      <Filter.Action label="创建会话">
-        <Button>
-          <Icon icon={Plus} width={12} height={12} />
-        </Button>
-      </Filter.Action>
-    </Filter>
   )
 }
 
