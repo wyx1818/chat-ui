@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import 'styled-components/macro'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import StyledProfile, {
   Album,
@@ -28,21 +29,49 @@ import face from 'assets/images/face-female-2.jpg'
 import photo1 from 'assets/images/1.jpg'
 import photo2 from 'assets/images/2.jpg'
 import photo3 from 'assets/images/3.jpg'
+import { faPen } from '@fortawesome/free-solid-svg-icons'
+import Button from '../Button'
 
-function Profile({ children, ...rest }) {
+function Profile({
+  showEditBtn,
+  showCloseIcon = true,
+  onEdit,
+  status,
+  children,
+  ...rest
+}) {
   return (
     <StyledProfile {...rest}>
-      <CloseIcon icon={Cross} />
+      {showCloseIcon && <CloseIcon icon={Cross} />}
       <Avatar
         src={face}
         size="160px"
-        status="online"
+        status={status}
         statusIconSize="25px"
         css={`
           margin: 26px 0;
+          grid-area: 1/1/3/2;
         `}
       />
-
+      {showEditBtn && (
+        <Button
+          diameter="52px"
+          onClick={onEdit}
+          css={`
+            grid-area: 1/1/3/2;
+            align-self: end;
+            margin-left: 100px;
+            z-index: 10;
+          `}
+        >
+          <FontAwesomeIcon
+            icon={faPen}
+            css={`
+              font-size: 24px;
+            `}
+          />
+        </Button>
+      )}
       <Paragraph
         size="XLarge"
         css={`
