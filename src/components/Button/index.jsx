@@ -37,7 +37,7 @@ function Button({
 
 Button.propTypes = {
   children: PropTypes.any,
-  type: PropTypes.oneOf(['primary']),
+  type: PropTypes.oneOf(['primary','hangOff']),
   shape: PropTypes.oneOf(['circle', 'rect']),
   diameter: PropTypes.string,
 }
