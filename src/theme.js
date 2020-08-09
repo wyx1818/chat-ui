@@ -16,7 +16,8 @@ export default {
   background: 'white',
   inactiveColor: 'rgba(41, 47, 76, 0.3)',
   inactiveColorDark: 'white',
-
+  gradiantGray: 'linear-gradient(119.19deg, #FFF 0%,#F8F8F8 65.34%, #fff 100% )'
+,
   // 字体大小
   XXSmall: '0.8rem',
   XSmall: '1rem',

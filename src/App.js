@@ -1,11 +1,14 @@
 import React from 'react'
-
-import useColorSwitch from './useColorSwitch'
+import ChatApp from './components/ChatApp'
+import theme from './theme'
+import { ThemeProvider } from 'styled-components'
 
 function App() {
-  const [color, handleButtonClick] = useColorSwitch()
-  const [color2, handleButton2Click] = useColorSwitch('#0000ff', '#ff00ff')
-  return <div></div>
+  return (
+    <ThemeProvider theme={theme}>
+      <ChatApp />
+    </ThemeProvider>
+  )
 }
 
 export default App
