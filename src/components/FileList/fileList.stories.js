@@ -1,10 +1,14 @@
-import React from "react"
+import React from 'react'
 
-import FileList from "."
+import FileList from '.'
 
 export default {
-  title: "页面组件/FileList",
-  component: FileList
+  title: '页面组件/FileList',
+  component: FileList,
 }
 
-export const Default = () => <FileList />
+export const Default = () => (
+  <div style={{ width: '500px' }}>
+    <FileList />
+  </div>
+)
