@@ -10,6 +10,9 @@ import Icon from '../Icon'
 import { ReactComponent as Call } from 'assets/icons/call.svg'
 import { ReactComponent as Camera } from 'assets/icons/camera.svg'
 import { ReactComponent as Options } from 'assets/icons/options.svg'
+import Dropdown from '../Dropdown'
+import { DropDownItem } from '../Dropdown/style'
+import Separator from '../Separator'
 
 function TitleBar({ avatarSrc, name, status, time, children, ...rest }) {
   return (
@@ -25,7 +28,24 @@ function TitleBar({ avatarSrc, name, status, time, children, ...rest }) {
       <Actions>
         <Icon icon={Call} opacity={0.3} />
         <Icon icon={Camera} opacity={0.3} />
-        <Icon icon={Options} opacity={0.3} />
+        <Dropdown
+          content={
+            <>
+              <DropDownItem>
+                <Paragraph>个人资料</Paragraph>
+              </DropDownItem>
+              <DropDownItem>
+                <Paragraph>关闭会话</Paragraph>
+              </DropDownItem>
+              <Separator />
+              <DropDownItem>
+                <Paragraph type="danger">屏蔽此人</Paragraph>
+              </DropDownItem>
+            </>
+          }
+        >
+          <Icon icon={Options} opacity={0.3} />
+        </Dropdown>
       </Actions>
     </StyledTitleBar>
   )
