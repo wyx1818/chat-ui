@@ -23,7 +23,7 @@ import Paragraph from '../Paragraph'
 import videoCaller from 'assets/images/video-caller.jpg'
 import face from 'assets/images/face-female-1.jpg'
 
-function VideoCall({ children, ...rest }) {
+function VideoCall({ children,onHangOffClicked, ...rest }) {
   const [fullScreen, setFullScreen] = useState(true)
 
   if (!fullScreen) {
@@ -77,7 +77,7 @@ function VideoCall({ children, ...rest }) {
           <FontAwesomeIcon icon={faMicrophone} />
         </Action>
         <Action type="hangOff">
-          <FontAwesomeIcon icon={faPhoneSlash} />
+          <FontAwesomeIcon icon={faPhoneSlash} onClick={onHangOffClicked}/>
         </Action>
         <Action>
           <FontAwesomeIcon icon={faVolumeMute} />

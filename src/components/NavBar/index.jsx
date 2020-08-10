@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import 'styled-components/macro'
+import {Link, useLocation, matchPath} from 'react-router-dom'
 
 import StyledNavBar, { StyledMenuItem, MenuIcon, MenuItems } from './style'
 import Badge from '../Badge'
@@ -27,12 +28,13 @@ function NavBar({ ...rest }) {
     <StyledNavBar {...rest}>
       <Avatar src={profileImage} status="online" />
       <MenuItems>
-        <MenuItem icon={faCommentDots} showBadge active />
-        <MenuItem icon={faUsers} />
-        <MenuItem icon={faFolder} />
-        <MenuItem icon={faStickyNote} />
+        <MenuItem toPath='/' icon={faCommentDots} showBadge />
+        <MenuItem toPath='/contacts' icon={faUsers} />
+        <MenuItem toPath='/files' icon={faFolder} />
+        <MenuItem toPath='/notes' icon={faStickyNote} />
         <MenuItem icon={faEllipsisH} />
         <MenuItem
+          toPath='/settings'
           icon={faCog}
           css={`
             align-self: end;
@@ -45,6 +47,7 @@ function NavBar({ ...rest }) {
 
 /**
  * 页面组件/菜单子项
+ * @param toPath
  * @param icon 菜单图标
  * @param active 激活状态
  * @param showBadge 显示徽章
@@ -52,14 +55,19 @@ function NavBar({ ...rest }) {
  * @returns {JSX.Element}
  * @constructor
  */
-function MenuItem({ icon, active, showBadge, ...rest }) {
+function MenuItem({ toPath, icon, showBadge, ...rest }) {
+  const loc = useLocation()
+  const active = !!matchPath(loc.pathname, {
+    path: toPath,
+    exact: toPath === '/'
+  })
   return (
     <StyledMenuItem active={active} {...rest}>
-      <a href="#">
+      <Link to={toPath}>
         <Badge show={showBadge}>
           <MenuIcon icon={icon} active={active ? 1 : 0} />
         </Badge>
-      </a>
+      </Link>
     </StyledMenuItem>
   )
 }

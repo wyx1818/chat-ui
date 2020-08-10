@@ -5,6 +5,7 @@ import Button from '../../Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function SocialIcon({ icon, bgColor, href, ...rest }) {
+  console.log('SocialIcon传入值：', icon)
   return (
     <Button
       size="30px"
@@ -18,7 +19,7 @@ function SocialIcon({ icon, bgColor, href, ...rest }) {
 }
 
 SocialIcon.propTypes = {
-  icon: PropTypes.elementType,
+  icon: PropTypes.any,
   bgColor: PropTypes.string,
   href: PropTypes.string,
 }

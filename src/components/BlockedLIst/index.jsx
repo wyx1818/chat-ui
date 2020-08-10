@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import 'styled-components/macro'
+import { useHistory } from 'react-router-dom'
 
 import StyledBlockedLIst, {
   BlockedAvatar,
@@ -17,6 +18,8 @@ import face from 'assets/images/face-male-2.jpg'
 import Text from '../Text'
 
 function BlockedLIst({ children, ...rest }) {
+  const history = useHistory()
+
   return (
     <StyledBlockedLIst {...rest}>
       <SettingsMenu>
@@ -25,6 +28,7 @@ function BlockedLIst({ children, ...rest }) {
           css={`
             cursor: pointer;
           `}
+          onClick={() => history.goBack()}
         />
         <Text size="XXLarge">已屏蔽的好友</Text>
       </SettingsMenu>

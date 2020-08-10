@@ -10,10 +10,17 @@ import Footer from '../Footer'
 
 import face from '../../assets/images/face-male-2.jpg'
 
-function Conversation({ children, ...rest }) {
+function Conversation({ onAvatarClick,onVideoClicked, children, ...rest }) {
   return (
     <StyledConversation {...rest}>
-      <TitleBar avatarSrc={face} name="小土豆" status="online" time="3小时前" />
+      <TitleBar
+        avatarSrc={face}
+        name="小土豆"
+        status="online"
+        time="3小时前"
+        onAvatarClick={onAvatarClick}
+        onVideoClicked={onVideoClicked}
+      />
       <Conversations>
         <ChatBubble time="昨天 下午14:26">Hi 醉渔，忙什么呢</ChatBubble>
         <MyChatBubble time="昨天 下午14:28">

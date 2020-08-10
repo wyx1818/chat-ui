@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import 'styled-components/macro'
+import {Link} from 'react-router-dom'
 
 import StyledSettings, {
   SettingsItemControl,
@@ -31,7 +32,9 @@ function Settings({ children, ...rest }) {
         <SettingsItem label="语音和视频通话提醒" />
         <SettingsItem label="显示通知详情" />
         <SettingsItem label="声音" />
-        <SettingsItem label="查看已静音的好友列表" type="menu" />
+        <Link to={`/settings/blocked`} css={`text-decoration: none;color: inherit`}>
+          <SettingsItem label="查看已静音的好友列表" type="menu" />
+        </Link>
       </SettingsGroup>
     </StyledSettings>
   )

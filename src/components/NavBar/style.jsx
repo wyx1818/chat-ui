@@ -21,6 +21,15 @@ const StyledMenuItem = styled.div`
 
     ${activeBarCss()};
     ${({ active }) => (active ? '' : '&::before, &::after {height: 0}')};
+
+    &:hover {
+
+
+      svg {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+    }
   }
 `
 
@@ -29,6 +38,9 @@ const MenuIcon = styled(FontAwesomeIcon)`
   color: white;
   font-size: 24px;
   opacity: ${({ active }) => (active ? 1 : 0.3)};
+
+  transform: scale(1);
+  transition: 0.4s;
 `
 
 // 侧导航

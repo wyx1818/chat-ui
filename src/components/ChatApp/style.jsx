@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 // 布局导航
 const Nav = styled.div`
@@ -8,7 +8,7 @@ const Nav = styled.div`
 // 侧边栏
 const SideBar = styled.aside`
   max-width: 448px;
-  min-width: 344px;
+  min-width: 350px;
   height: 100vh;
   flex: 1;
   background: ${({ theme }) => theme.gradiantGray};
@@ -23,6 +23,12 @@ const Content = styled.main`
 // 滑动抽屉
 const Drawer = styled.div`
   max-width: 310px;
+  width: 0;
+  ${({ show }) =>
+    show &&
+    css`
+      width: 310px;
+    `}
 `
 
 const StyledChatApp = styled.div`
@@ -34,4 +40,4 @@ const StyledChatApp = styled.div`
 `
 
 export default StyledChatApp
-export {Nav, SideBar, Content, Drawer}
+export { Nav, SideBar, Content, Drawer }

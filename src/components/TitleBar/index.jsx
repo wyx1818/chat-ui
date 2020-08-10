@@ -14,10 +14,19 @@ import Dropdown from '../Dropdown'
 import { DropDownItem } from '../Dropdown/style'
 import Separator from '../Separator'
 
-function TitleBar({ avatarSrc, name, status, time, children, ...rest }) {
+function TitleBar({
+  onAvatarClick,
+  onVideoClicked,
+  avatarSrc,
+  name,
+  status,
+  time,
+  children,
+  ...rest
+}) {
   return (
     <StyledTitleBar {...rest}>
-      <Avatar src={avatarSrc} status="online" />
+      <Avatar onClick={onAvatarClick} src={avatarSrc} status="online" />
       <Title>
         <Paragraph size="large">{name}</Paragraph>
         <Paragraph type="secondary">
@@ -26,7 +35,7 @@ function TitleBar({ avatarSrc, name, status, time, children, ...rest }) {
         </Paragraph>
       </Title>
       <Actions>
-        <Icon icon={Call} opacity={0.3} />
+        <Icon icon={Call} opacity={0.3} onClick={onVideoClicked} />
         <Icon icon={Camera} opacity={0.3} />
         <Dropdown
           content={
