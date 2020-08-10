@@ -20,16 +20,16 @@ const fileIcons = {
   ppt: FilePPT
 }
 
-function FileCard ({ children, ...rest }) {
+function FileCard ({ name, size, type, updateAt,children, ...rest }) {
   return (
     <StyledFileCard { ...rest }>
-      <FileIcon icon={fileIcons.zip}/>
-      <FileName>Source Code.zip</FileName>
-      <FileSize>1.5M</FileSize>
+      <FileIcon icon={fileIcons[type]}/>
+      <FileName>{name}</FileName>
+      <FileSize>{size}</FileSize>
       <Options>
         <Icon icon={OptionsIcon} opacity={0.3}/>
       </Options>
-      <Time>2020年08月09日</Time>
+      <Time>{updateAt}</Time>
     </StyledFileCard>
   )
 }

@@ -7,6 +7,8 @@ import FilterList from '../FilterList'
 import NoteCard from '../NoteCard'
 import useStaggeredList from '../../hooks/useStaggeredList'
 
+import noteData from 'data/notes'
+
 function NoteList({ children, ...rest }) {
   const trailAnimations = useStaggeredList(10)
 
@@ -17,9 +19,15 @@ function NoteList({ children, ...rest }) {
         actionLabel="添加笔记"
       >
         <Notes>
-          {new Array(10).fill(0).map((_, index) => (
-            <animated.div key={index} style={trailAnimations[index]}>
-              <NoteCard key={index} />
+          {noteData.map(({ id, image, title, excerpt, publishedAt }, index) => (
+            <animated.div key={id} style={trailAnimations[index]}>
+              <NoteCard
+                key={id}
+                image={image}
+                title={title}
+                excerpt={excerpt}
+                publishedAt={publishedAt}
+              />
             </animated.div>
           ))}
         </Notes>

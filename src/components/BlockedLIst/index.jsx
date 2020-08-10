@@ -14,8 +14,8 @@ import StyledBlockedLIst, {
 import Icon from '../Icon'
 import { ReactComponent as ArrowMenuLeft } from 'assets/icons/arrowMenuLeft.svg'
 import { ReactComponent as closeCircle } from 'assets/icons/closeCircle.svg'
-import face from 'assets/images/face-male-2.jpg'
 import Text from '../Text'
+import blockData from 'data/blocked'
 
 function BlockedLIst({ children, ...rest }) {
   const history = useHistory()
@@ -34,12 +34,12 @@ function BlockedLIst({ children, ...rest }) {
       </SettingsMenu>
 
       <FriendList>
-        {new Array(8).fill(0).map((_, i) => {
+        {blockData.map(({id, avatar, name}) => {
           return (
-            <ClosableAvatar key={i}>
-              <BlockedAvatar size="105px" src={face} />
+            <ClosableAvatar key={id}>
+              <BlockedAvatar size="105px" src={avatar} />
               <CloseIcon width={46} height={51} icon={closeCircle} />
-              <BlockName>李浩</BlockName>
+              <BlockName>{name}</BlockName>
             </ClosableAvatar>
           )
         })}

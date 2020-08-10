@@ -65,7 +65,7 @@ function MessageCard({
             }}
           />
         )}
-        <MessageText>{message}</MessageText>
+        <MessageText title={message}>{message}</MessageText>
         <UnreadBadge count={unreadCount} />
       </Message>
     </StyledMessageCard>

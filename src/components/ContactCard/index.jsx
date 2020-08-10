@@ -5,18 +5,26 @@ import StyledContactCard, { Intro, Name } from './style'
 import Avatar from '../Avatar'
 import face from 'assets/images/face-male-2.jpg'
 
-function ContactCard ({ children, ...rest }) {
+function ContactCard({
+  avatarSrc,
+  name,
+  intro,
+  status,
+  statusText,
+  children,
+  ...rest
+}) {
   return (
-    <StyledContactCard { ...rest }>
-      <Avatar src={face} status="online"/>
-      <Name>李浩</Name>
-      <Intro>我是前端工程师</Intro>
+    <StyledContactCard {...rest}>
+      <Avatar src={avatarSrc} status={status} />
+      <Name>{name}</Name>
+      <Intro>{intro}</Intro>
     </StyledContactCard>
   )
 }
 
 ContactCard.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 }
 
 export default ContactCard
