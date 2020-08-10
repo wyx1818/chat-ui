@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import StyledIcon from '../Icon/style'
+import { animated } from 'react-spring'
 
 // 文字标题
 const Title = styled.div`
@@ -18,7 +19,7 @@ const Actions = styled.div`
   }
 `
 
-const StyledTitleBar = styled.div`
+const StyledTitleBar = styled(animated.div)`
   display: grid;
   grid-template-columns: 62px 1fr 112px;
   padding: 30px;

@@ -21,11 +21,13 @@ function TitleBar({
   name,
   status,
   time,
+  style,
+  animeProps,
   children,
   ...rest
 }) {
   return (
-    <StyledTitleBar {...rest}>
+    <StyledTitleBar style={{ ...style, ...animeProps }} {...rest}>
       <Avatar onClick={onAvatarClick} src={avatarSrc} status="online" />
       <Title>
         <Paragraph size="large">{name}</Paragraph>
@@ -35,8 +37,8 @@ function TitleBar({
         </Paragraph>
       </Title>
       <Actions>
-        <Icon icon={Call} opacity={0.3} onClick={onVideoClicked} />
-        <Icon icon={Camera} opacity={0.3} />
+        <Icon icon={Call} opacity={0.3} />
+        <Icon icon={Camera} opacity={0.3} onClick={onVideoClicked} />
         <Dropdown
           content={
             <>

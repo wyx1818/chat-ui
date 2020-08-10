@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
@@ -17,16 +18,18 @@ import { ReactComponent as OptionsIcon } from 'assets/icons/options.svg'
 
 /**
  * 聊天底部栏
+ * @param animeProps
+ * @param style
  * @param children
  * @param rest
  * @returns {JSX.Element}
  * @constructor
  */
-function Footer({ children, ...rest }) {
+function Footer({ animeProps, style, children, ...rest }) {
   const [emojiIconActive, setEmojiIconActive] = useState(false)
   const theme = useTheme()
   return (
-    <StyledFooter {...rest}>
+    <StyledFooter style={{ ...style, ...animeProps }} {...rest}>
       <Input
         placeholder="输入想和对方说的话"
         prefixIcon={<Icon icon={Clip} />}
@@ -56,10 +59,6 @@ function Footer({ children, ...rest }) {
       />
     </StyledFooter>
   )
-}
-
-{
-  /* eslint-disable jsx-a11y/accessible-emoji */
 }
 
 function PopoverContent(props) {

@@ -1,11 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { animated } from 'react-spring'
 
-import StyledNoteList, {Notes} from './style'
+import StyledNoteList, { Notes } from './style'
 import FilterList from '../FilterList'
 import NoteCard from '../NoteCard'
+import useStaggeredList from '../../hooks/useStaggeredList'
 
 function NoteList({ children, ...rest }) {
+  const trailAnimations = useStaggeredList(10)
+
   return (
     <StyledNoteList {...rest}>
       <FilterList
@@ -14,7 +18,9 @@ function NoteList({ children, ...rest }) {
       >
         <Notes>
           {new Array(10).fill(0).map((_, index) => (
-            <NoteCard key={index} />
+            <animated.div key={index} style={trailAnimations[index]}>
+              <NoteCard key={index} />
+            </animated.div>
           ))}
         </Notes>
       </FilterList>

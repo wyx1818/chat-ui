@@ -31,6 +31,7 @@ import photo2 from 'assets/images/2.jpg'
 import photo3 from 'assets/images/3.jpg'
 import { faPen } from '@fortawesome/free-solid-svg-icons'
 import Button from '../Button'
+import { Link } from 'react-router-dom'
 
 function Profile({
   showEditBtn,
@@ -133,7 +134,7 @@ function Profile({
       <AlbumSection>
         <AlbumTitle>
           <Text type="secondary">相册（31）</Text>
-          <a>查看全部</a>
+          <Link to={'/'}>查看全部</Link>
         </AlbumTitle>
         <Album>
           <Photo src={photo1} />

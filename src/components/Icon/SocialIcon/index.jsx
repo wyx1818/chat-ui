@@ -5,7 +5,6 @@ import Button from '../../Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function SocialIcon({ icon, bgColor, href, ...rest }) {
-  console.log('SocialIcon传入值：', icon)
   return (
     <Button
       size="30px"

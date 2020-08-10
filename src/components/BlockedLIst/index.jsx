@@ -36,7 +36,7 @@ function BlockedLIst({ children, ...rest }) {
       <FriendList>
         {new Array(8).fill(0).map((_, i) => {
           return (
-            <ClosableAvatar>
+            <ClosableAvatar key={i}>
               <BlockedAvatar size="105px" src={face} />
               <CloseIcon width={46} height={51} icon={closeCircle} />
               <BlockName>李浩</BlockName>

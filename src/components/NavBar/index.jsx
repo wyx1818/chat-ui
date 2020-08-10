@@ -32,7 +32,7 @@ function NavBar({ ...rest }) {
         <MenuItem toPath='/contacts' icon={faUsers} />
         <MenuItem toPath='/files' icon={faFolder} />
         <MenuItem toPath='/notes' icon={faStickyNote} />
-        <MenuItem icon={faEllipsisH} />
+        <MenuItem toPath='#' icon={faEllipsisH} />
         <MenuItem
           toPath='/settings'
           icon={faCog}

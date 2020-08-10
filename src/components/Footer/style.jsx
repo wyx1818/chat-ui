@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { animated } from 'react-spring'
 
 // 右侧图标容器组件
 const IconContainer = styled.div`
@@ -21,7 +22,7 @@ const StyledPopoverContent = styled.div`
 `
 
 // 底部容器
-const StyledFooter = styled.footer`
+const StyledFooter = styled(animated.footer)`
   padding: 12px 30px;
   width: 100%;
 `
