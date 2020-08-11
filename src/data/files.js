@@ -22,7 +22,7 @@ export default [
   },
   {
     id: 4,
-    name: "JavaScript: The Definitive Guide",
+    name: "《JavaScript: The Definitive Guide》.pdf",
     size: "4.2M",
     type: "pdf",
     updatedAt: "昨天 下午18:30",

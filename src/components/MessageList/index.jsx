@@ -4,7 +4,6 @@ import { animated } from 'react-spring'
 
 import StyledMessageList, { ChartLIst } from './style'
 import MessageCard from '../MessageCard'
-import face1 from 'assets/images/face-female-2.jpg'
 import FilterList from '../FilterList'
 import useStaggeredList from '../../hooks/useStaggeredList'
 

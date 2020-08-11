@@ -7,7 +7,6 @@ import StyledNoteCard, {
   NotePublishTime,
   NoteTitle,
 } from './style'
-import note1 from 'assets/images/note-1.jpg'
 
 function NoteCard({ image, title, excerpt, publishedAt, children, ...rest }) {
   return (

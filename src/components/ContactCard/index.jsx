@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 import StyledContactCard, { Intro, Name } from './style'
 import Avatar from '../Avatar'
-import face from 'assets/images/face-male-2.jpg'
 
 function ContactCard({
   avatarSrc,

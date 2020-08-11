@@ -12,6 +12,7 @@ const typeVariants = {
 const StyledSelect = styled.select`
   appearance: none;
   background-image: url(${CaretDown});
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: right center;
   border: none;

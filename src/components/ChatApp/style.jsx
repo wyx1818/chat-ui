@@ -49,7 +49,6 @@ const Drawer = styled.div`
 const StyledChatApp = styled.div`
   display: flex;
   height: 100vh;
-  width: 100vw;
   overflow: hidden;
   position: relative;
 `
