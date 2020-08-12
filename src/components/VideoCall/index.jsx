@@ -9,6 +9,7 @@ import {
   faVolumeMute,
 } from '@fortawesome/free-solid-svg-icons'
 import 'styled-components/macro'
+import { connect } from 'react-redux'
 
 import StyledVideoCall, {
   Action,
@@ -22,8 +23,9 @@ import Paragraph from '../Paragraph'
 
 import videoCaller from 'assets/images/video-caller.jpg'
 import face from 'assets/images/face-female-1.jpg'
+import { hideVideoCalling } from '../../redux/actions'
 
-function VideoCall({ children,onHangOffClicked, ...rest }) {
+function VideoCall({ children, hideVideoCalling, ...rest }) {
   const [fullScreen, setFullScreen] = useState(true)
 
   if (!fullScreen) {
@@ -77,7 +79,7 @@ function VideoCall({ children,onHangOffClicked, ...rest }) {
           <FontAwesomeIcon icon={faMicrophone} />
         </Action>
         <Action type="hangOff">
-          <FontAwesomeIcon icon={faPhoneSlash} onClick={onHangOffClicked}/>
+          <FontAwesomeIcon icon={faPhoneSlash} onClick={hideVideoCalling} />
         </Action>
         <Action>
           <FontAwesomeIcon icon={faVolumeMute} />
@@ -93,4 +95,8 @@ VideoCall.propTypes = {
   children: PropTypes.any,
 }
 
-export default VideoCall
+const mapDispatchToProps = (dispatch) => ({
+  hideVideoCalling: () => dispatch(hideVideoCalling()),
+})
+
+export default connect(null, mapDispatchToProps)(VideoCall)

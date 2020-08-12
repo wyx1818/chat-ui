@@ -1,5 +1,5 @@
 import React from 'react'
-import ChatApp from './components/ChatApp'
+import ChatApp from './views/ChatApp'
 import theme from './theme'
 import { ThemeProvider } from 'styled-components'
 import { BrowserRouter as Router } from 'react-router-dom'

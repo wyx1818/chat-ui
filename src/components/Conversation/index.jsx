@@ -12,7 +12,7 @@ import Footer from '../Footer'
 
 import face from '../../assets/images/face-male-2.jpg'
 
-function Conversation({ onAvatarClick, onVideoClicked, children, ...rest }) {
+function Conversation({ children, ...rest }) {
   // 标题栏动画
   const tBarAnimeProps = useSpring({
     opacity: 1,
@@ -44,8 +44,6 @@ function Conversation({ onAvatarClick, onVideoClicked, children, ...rest }) {
         name="小土豆"
         status="online"
         time="3小时前"
-        onAvatarClick={onAvatarClick}
-        onVideoClicked={onVideoClicked}
         animeProps={tBarAnimeProps}
       />
       <Conversations style={conversationAnimeProps}>
@@ -61,7 +59,7 @@ function Conversation({ onAvatarClick, onVideoClicked, children, ...rest }) {
           <Emoji label="smile">😊</Emoji>
         </MyChatBubble>
       </Conversations>
-      <Footer animeProps={footerAnimeProps}/>
+      <Footer animeProps={footerAnimeProps} />
     </StyledConversation>
   )
 }

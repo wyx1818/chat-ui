@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 // 布局导航
-const Nav = styled.div`
+const StyledNav = styled.div`
   flex-shrink: 0;
 
   position: relative;
@@ -9,7 +9,7 @@ const Nav = styled.div`
 `
 
 // 侧边栏
-const SideBar = styled.aside`
+const StyledSideBar = styled.aside`
   max-width: 448px;
   min-width: 350px;
   height: 100vh;
@@ -26,7 +26,7 @@ const SideBar = styled.aside`
 `
 
 // 布局内容区域
-const Content = styled.main`
+const StyledContent = styled.main`
   flex: 2;
   position: relative;
 `
@@ -54,4 +54,4 @@ const StyledChatApp = styled.div`
 `
 
 export default StyledChatApp
-export { Nav, SideBar, Content, Drawer }
+export { StyledNav, StyledSideBar, StyledContent, Drawer }
