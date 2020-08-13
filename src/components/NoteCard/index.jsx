@@ -4,17 +4,28 @@ import PropTypes from 'prop-types'
 import StyledNoteCard, {
   NoteExcerpt,
   NoteImage,
-  NotePublishTime,
+  NoteTime,
   NoteTitle,
 } from './style'
+import TimeFormat from '../TimeFormat'
 
-function NoteCard({ image, title, excerpt, publishedAt, children, ...rest }) {
+function NoteCard({
+  image,
+  title,
+  excerpt,
+  publishedAt,
+  updatedAt,
+  children,
+  ...rest
+}) {
   return (
     <StyledNoteCard {...rest}>
       <NoteImage src={image} />
       <NoteTitle>{title}</NoteTitle>
       <NoteExcerpt>{excerpt}</NoteExcerpt>
-      <NotePublishTime>{publishedAt}</NotePublishTime>
+      <NoteTime>
+        <TimeFormat dateToFormat={publishedAt} />
+      </NoteTime>
     </StyledNoteCard>
   )
 }

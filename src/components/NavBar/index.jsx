@@ -74,8 +74,8 @@ function MenuItem({ toPath, icon, showBadge, ...rest }) {
 
 NavBar.propTypes = {}
 
-MenuItem.prototype = {
-  icon: PropTypes.elementType,
+MenuItem.propTypes = {
+  icon: PropTypes.any,
   active: PropTypes.bool,
   showBadge: PropTypes.bool,
 }

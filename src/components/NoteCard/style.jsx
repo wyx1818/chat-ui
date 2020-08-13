@@ -16,6 +16,9 @@ const NoteImage = styled.img`
 const NoteTitle = styled(Heading).attrs({ level: 2 })`
   grid-area: title;
   align-self: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `
 
 // 笔记摘要
@@ -27,8 +30,8 @@ const NoteExcerpt = styled(Paragraph).attrs({ size: 'small' })`
   overflow: hidden;
 `
 
-// 发布时间
-const NotePublishTime = styled(Paragraph).attrs({ type: 'secondary' })`
+// 时间
+const NoteTime = styled(Paragraph).attrs({ type: 'secondary' })`
   grid-area: time;
   justify-self: end;
 `
@@ -44,4 +47,4 @@ const StyledNoteCard = styled.div`
 
 export default StyledNoteCard
 
-export { NoteExcerpt, NoteImage, NotePublishTime, NoteTitle }
+export { NoteExcerpt, NoteImage, NoteTime, NoteTitle }

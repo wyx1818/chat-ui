@@ -19,17 +19,20 @@ function NoteList({ children, ...rest }) {
         actionLabel="添加笔记"
       >
         <Notes>
-          {noteData.map(({ id, image, title, excerpt, publishedAt }, index) => (
-            <animated.div key={id} style={trailAnimations[index]}>
-              <NoteCard
-                key={id}
-                image={image}
-                title={title}
-                excerpt={excerpt}
-                publishedAt={publishedAt}
-              />
-            </animated.div>
-          ))}
+          {noteData.map(
+            ({ id, image, title, excerpt, publishedAt, updatedAt }, index) => (
+              <animated.div key={id} style={trailAnimations[index]}>
+                <NoteCard
+                  key={id}
+                  image={image}
+                  title={title}
+                  excerpt={excerpt}
+                  publishedAt={publishedAt}
+                  updatedAt={updatedAt}
+                />
+              </animated.div>
+            )
+          )}
         </Notes>
       </FilterList>
     </StyledNoteList>

@@ -5,7 +5,7 @@ import StyledHeading from './style'
 
 function Heading({ children, level, ...rest }) {
   return (
-    <StyledHeading as={`h${level}`} {...rest}>
+    <StyledHeading as={`h${level}`} {...rest} title={children}>
       {children}
     </StyledHeading>
   )
