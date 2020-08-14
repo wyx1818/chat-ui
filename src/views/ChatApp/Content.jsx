@@ -1,16 +1,33 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, useLocation } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Settings from '../../components/Settings'
 import BlockedLIst from '../../components/BlockedLIst'
-import Conversation from '../../components/Conversation'
+import Conversation from '../Conversation'
 import VideoCallContainer from 'containers/VideoCallContainer'
 import { StyledContent } from './style'
 import RichEditor from '../RichEditor'
+import FileView from '../FileView'
+import ContactView from '../ContactView'
+import { useTransition, animated } from 'react-spring'
 
 function Content(props) {
   const { videoCallingState } = props
+
+  const location = useLocation()
+  const getFirstMatchPath = (location) => location.pathname.split('/')[1]
+  const transitions = useTransition(location, getFirstMatchPath, {
+    initial: { height: '100%' },
+    from: { opacity: 0 },
+    enter: { opacity: 1, height: '100%' },
+    leave: { opacity: 0 },
+    config: {
+      duration: 200,
+    },
+    delay: 200,
+  })
+  console.log(transitions)
 
   const noteValue = `
   # 荷塘月色
@@ -95,6 +112,12 @@ function Content(props) {
         </Route>
         <Route exact path="/notes">
           <RichEditor title="我是标题" type="empty" noteValue={noteValue} />
+        </Route>
+        <Route exact path="/files">
+          <FileView />
+        </Route>
+        <Route exact path="/contacts">
+          <ContactView />
         </Route>
         <Route path="/">
           <Conversation />

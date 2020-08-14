@@ -14,7 +14,6 @@ const dealData = fileData.map((data) => ({
   ...data,
   pinyin: pinyin(data.name).join(''),
 }))
-console.log(dealData)
 
 function FileList({ children, ...rest }) {
   const [sortType, setSortType] = useState('updatedAt')

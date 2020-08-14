@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import ChatBubble from '../ChatBubble'
+import ChatBubble from '../../components/ChatBubble'
 import { animated } from 'react-spring'
 
 // 用于布局消息气泡
@@ -34,6 +34,10 @@ const StyledConversation = styled.div`
   }
 `
 
+const StyledEmptyConversation = styled.div`
+  height: 100%;
+`
+
 export default StyledConversation
 
-export { Conversations, MyChatBubble }
+export { Conversations, MyChatBubble, StyledEmptyConversation }

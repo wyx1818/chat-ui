@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { animated } from 'react-spring'
 
-const StyledEmpty = styled.div`
+const StyledEmpty = styled(animated.div)`
   display: flex;
   justify-content: center;
   align-items: center;

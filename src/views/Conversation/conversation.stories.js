@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Conversation from '.'
+import Conversation from './index'
 
 export default {
   title: '页面组件/Conversation',

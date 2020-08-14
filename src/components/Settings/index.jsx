@@ -14,18 +14,11 @@ import Icon from '../Icon'
 
 import { ReactComponent as ArrowMenuRight } from 'assets/icons/arrowMenuRight.svg'
 import Separator from '../Separator'
-import { useSpring, animated } from 'react-spring'
+import { animated } from 'react-spring'
+import useContentAnimation from '../../hooks/useContentAnimation'
 
 function Settings({ children, ...rest }) {
-  const animeProps = useSpring({
-    transform: 'translate3d(0px, 0px, 0px)',
-    opacity: 1,
-    from: { transform: 'translate3d(100px, 0px, 0px)', opacity: 0 },
-    config: {
-      tension: 140,
-    },
-    delay: 300,
-  })
+  const animeProps = useContentAnimation()
 
   return (
     <StyledSettings {...rest}>

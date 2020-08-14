@@ -5,7 +5,7 @@ import StyledRichEditor from './style'
 import Empty from '../../components/Empty'
 import EditMethod from './EditMethod'
 
-import note from 'assets/icons/empyNote.svg'
+import note from 'assets/icons/undraw_Specs_djh3.svg'
 import ViewerMethod from './ViewerMethod'
 
 RichEditor.propTypes = {

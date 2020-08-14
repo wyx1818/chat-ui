@@ -3,16 +3,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useSpring } from 'react-spring'
 
-import StyledConversation, { Conversations, MyChatBubble } from './style'
-import TitleBar from '../TitleBar'
-import ChatBubble from '../ChatBubble'
-import VoiceMessage from '../VoiceMessage'
-import Emoji from '../Emoji'
-import Footer from '../Footer'
+import StyledConversation, {
+  Conversations,
+  MyChatBubble,
+  StyledEmptyConversation,
+} from './style'
+import TitleBar from '../../components/TitleBar'
+import ChatBubble from '../../components/ChatBubble'
+import VoiceMessage from '../../components/VoiceMessage'
+import Emoji from '../../components/Emoji'
+import Footer from '../../components/Footer'
 
 import face from '../../assets/images/face-male-2.jpg'
+import emptyIcon from 'assets/icons/undraw_chat_1wo5.svg'
+import Empty from '../../components/Empty'
 
-function Conversation({ children, ...rest }) {
+function Conversation({ type, children, ...rest }) {
   // 标题栏动画
   const tBarAnimeProps = useSpring({
     opacity: 1,
@@ -36,6 +42,14 @@ function Conversation({ children, ...rest }) {
     from: { opacity: 0, transform: 'translate3d(0px, 50px, 0px)' }, // 起始位置
     delay: 550,
   })
+
+  if (type === 'empty') {
+    return (
+      <StyledEmptyConversation>
+        <Empty icon={emptyIcon} />
+      </StyledEmptyConversation>
+    )
+  }
 
   return (
     <StyledConversation {...rest}>
@@ -66,6 +80,10 @@ function Conversation({ children, ...rest }) {
 
 Conversation.propTypes = {
   children: PropTypes.any,
+  type: PropTypes.oneOf(['empty'])
+}
+Conversation.defaultProps = {
+  type: 'empty',
 }
 
 export default Conversation
