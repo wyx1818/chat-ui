@@ -13,7 +13,7 @@ const NoteImage = styled.img`
 `
 
 // 笔记标题
-const NoteTitle = styled(Heading).attrs({ level: 2 })`
+const NoteTitle = styled(Heading).attrs({ level: 2, withTitle: true })`
   grid-area: title;
   align-self: center;
   white-space: nowrap;
@@ -22,18 +22,20 @@ const NoteTitle = styled(Heading).attrs({ level: 2 })`
 `
 
 // 笔记摘要
-const NoteExcerpt = styled(Paragraph).attrs({ size: 'small' })`
+const NoteExcerpt = styled(Paragraph).attrs({
+  size: 'small',
+  ellipsis: true,
+  withTitle: true,
+})`
   grid-area: excerpt;
   align-self: center;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 `
 
 // 时间
 const NoteTime = styled(Paragraph).attrs({ type: 'secondary' })`
   grid-area: time;
   justify-self: end;
+  align-self: center;
 `
 
 const StyledNoteCard = styled.div`

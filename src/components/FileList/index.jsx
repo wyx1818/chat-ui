@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { animated } from 'react-spring'
 
@@ -7,15 +7,36 @@ import FilterList from '../FilterList'
 import FileCard from '../FileCard'
 import useStaggeredList from '../../hooks/useStaggeredList'
 import fileData from 'data/files'
+import pinyin from 'pinyin'
+
+// 将汉字转为拼音，方便后续排序
+const dealData = fileData.map((data) => ({
+  ...data,
+  pinyin: pinyin(data.name).join(''),
+}))
+console.log(dealData)
 
 function FileList({ children, ...rest }) {
+  const [sortType, setSortType] = useState('updatedAt')
   const trailAnimations = useStaggeredList(10)
+
+  const filterData =
+    sortType === 'pinyin'
+      ? dealData.sort((m, n) => m[sortType].localeCompare(n[sortType]))
+      : dealData.sort((m, n) => n[sortType] - m[sortType])
 
   return (
     <StyledFileList {...rest}>
-      <FilterList options={['最新文件优先', '按文件名排序']}>
+      <FilterList
+        options={[
+          { label: '上传时间', value: 'updatedAt' },
+          { label: '文件名', value: 'pinyin' },
+        ]}
+        filterValue={sortType}
+        setSortType={setSortType}
+      >
         <Files>
-          {fileData.map(({ id, name, size, type, updateAt }, index) => (
+          {filterData.map(({ id, name, size, type, updateAt }, index) => (
             <animated.div key={id} style={trailAnimations[index]}>
               <FileCard
                 key={id}

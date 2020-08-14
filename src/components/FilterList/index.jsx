@@ -12,20 +12,28 @@ import { ReactComponent as Plus } from '../../assets/icons/plus.svg'
 
 function FilterList({
   options,
-  filterLabel = '列表排序',
+  filterLabel = '排序',
+  filterValue,
   actionLabel,
   children,
+  setSortType,
   ...rest
 }) {
+  const handleChange = (e) => {
+    setSortType(e.target.value)
+  }
+
   return (
     <StyledFilterList {...rest}>
       <Input.Search />
       <Filter style={{ padding: '20px 0' }}>
         {options && (
           <Filter.Filters label={filterLabel}>
-            <Select>
+            <Select defaultValue={filterValue} onChange={handleChange}>
               {options.map((option, index) => (
-                <Option key={index}>{option}</Option>
+                <Option key={index} value={option.value}>
+                  {option.label}
+                </Option>
               ))}
             </Select>
           </Filter.Filters>
@@ -48,7 +56,8 @@ FilterList.propTypes = {
   children: PropTypes.any, // 加载具体的列表
   options: PropTypes.array,
   filterLabel: PropTypes.string,
-  actionLabel: PropTypes.string
+  actionLabel: PropTypes.string,
+  filterValue: PropTypes.string,
 }
 
 export default FilterList

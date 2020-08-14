@@ -14,6 +14,7 @@ import Icon from '../Icon'
 import { useTheme } from 'styled-components'
 
 import { ReactComponent as Replied } from 'assets/icons/replied.svg'
+import TimeFormat from '../TimeFormat'
 
 /**
  * 消息卡片
@@ -51,7 +52,9 @@ function MessageCard({
       <Avatar status={avatarStatus} src={avatarSrc} />
       <Name>{name}</Name>
       <Status>{statusText}</Status>
-      <Time>{time}</Time>
+      <Time>
+        <TimeFormat dateToFormat={time} />
+      </Time>
       <Message replied={replied}>
         {replied && (
           <Icon

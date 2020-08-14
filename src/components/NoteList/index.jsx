@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { animated } from 'react-spring'
 
@@ -10,29 +10,40 @@ import useStaggeredList from '../../hooks/useStaggeredList'
 import noteData from 'data/notes'
 
 function NoteList({ children, ...rest }) {
+  const [sortType, setSortType] = useState('publishedAt')
   const trailAnimations = useStaggeredList(10)
+
+  // 过滤原始数据
+  const filterData = noteData.sort((m, n) => {
+    return n[sortType] - m[sortType]
+  })
 
   return (
     <StyledNoteList {...rest}>
       <FilterList
-        options={['最新创建优先', '最后修改优先']}
+        options={[
+          { label: '创建时间', value: 'publishedAt' },
+          { label: '修改时间', value: 'updatedAt' },
+        ]}
         actionLabel="添加笔记"
+        filterValue={sortType}
+        setSortType={setSortType}
       >
         <Notes>
-          {noteData.map(
-            ({ id, image, title, excerpt, publishedAt, updatedAt }, index) => (
+          {filterData.map((data, index) => {
+            const { id, image, title, excerpt } = data
+            return (
               <animated.div key={id} style={trailAnimations[index]}>
                 <NoteCard
                   key={id}
                   image={image}
                   title={title}
                   excerpt={excerpt}
-                  publishedAt={publishedAt}
-                  updatedAt={updatedAt}
+                  dateTime={data[sortType]}
                 />
               </animated.div>
             )
-          )}
+          })}
         </Notes>
       </FilterList>
     </StyledNoteList>

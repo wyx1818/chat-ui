@@ -13,7 +13,7 @@ function NoteCard({
   image,
   title,
   excerpt,
-  publishedAt,
+  dateTime,
   updatedAt,
   children,
   ...rest
@@ -24,7 +24,7 @@ function NoteCard({
       <NoteTitle>{title}</NoteTitle>
       <NoteExcerpt>{excerpt}</NoteExcerpt>
       <NoteTime>
-        <TimeFormat dateToFormat={publishedAt} />
+        <TimeFormat dateToFormat={dateTime} />
       </NoteTime>
     </StyledNoteCard>
   )
