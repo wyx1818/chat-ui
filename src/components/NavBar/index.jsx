@@ -28,7 +28,7 @@ function NavBar({ ...rest }) {
     <StyledNavBar {...rest}>
       <Avatar src={profileImage} status="online" />
       <MenuItems>
-        <MenuItem toPath='/' icon={faCommentDots} showBadge />
+        <MenuItem toPath='/chat' icon={faCommentDots} showBadge />
         <MenuItem toPath='/contacts' icon={faUsers} />
         <MenuItem toPath='/files' icon={faFolder} />
         <MenuItem toPath='/notes' icon={faStickyNote} />

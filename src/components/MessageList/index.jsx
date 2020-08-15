@@ -9,10 +9,15 @@ import useStaggeredList from '../../hooks/useStaggeredList'
 
 import messageData from 'data/messages'
 
-function MessageList({ children, ...rest }) {
+function MessageList({ changeType, children, ...rest }) {
+  // 激活的会话
+  const [active, setActive] = useState(null)
+  // 排序状态
   const [sortType, setSortType] = useState('lastMessageAt')
+  // 动画
   const trailAnimations = useStaggeredList(6)
 
+  // 排序列表
   const filterData = messageData.sort((m, n) => n[sortType] - m[sortType])
 
   return (
@@ -42,7 +47,10 @@ function MessageList({ children, ...rest }) {
               <animated.div key={id} style={trailAnimations[index]}>
                 <MessageCard
                   key={id}
-                  active={id === 3}
+                  id={id}
+                  active={active === id}
+                  setActive={setActive}
+                  changeType={changeType}
                   replied={replied}
                   avatarSrc={avatarSrc}
                   name={name}

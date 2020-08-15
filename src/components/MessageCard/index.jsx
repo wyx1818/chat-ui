@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import StyledMessageCard, {
   Message,
   MessageText,
@@ -26,8 +25,11 @@ import TimeFormat from '../TimeFormat'
  * @param message 消息
  * @param unreadCount 未读消息
  * @param active 激活状态
+ * @param setActive
+ * @param changeType
  * @param replied 已回复
  * @param children
+ * @param id
  * @param rest
  * @returns {JSX.Element}
  * @constructor
@@ -40,15 +42,23 @@ function MessageCard({
   time,
   message,
   unreadCount,
-  active,
+  active = false,
+  setActive,
+  changeType,
   replied,
   children,
+  id,
   ...rest
 }) {
   const theme = useTheme()
 
+  const clickHandler = () => {
+    changeType('message')
+    setActive(id)
+  }
+
   return (
-    <StyledMessageCard active={active} {...rest}>
+    <StyledMessageCard active={active} {...rest} onClick={clickHandler}>
       <Avatar status={avatarStatus} src={avatarSrc} />
       <Name>{name}</Name>
       <Status>{statusText}</Status>

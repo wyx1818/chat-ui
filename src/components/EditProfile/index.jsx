@@ -11,9 +11,7 @@ import StyledEditProfile, {
 } from './style'
 import Profile from '../Profile'
 import Avatar from '../Avatar'
-import face from 'assets/images/face-male-2.jpg'
 import Button from '../Button'
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import InputText from '../Input/InputText'
 import Radio from '../Radio'
 import LabelContainer from '../LabelContainer'
@@ -25,6 +23,8 @@ import {
   faLinkedin,
   faWeibo,
 } from '@fortawesome/free-brands-svg-icons'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import face from 'assets/images/face-male-2.jpg'
 
 function EditProfile({ children, ...rest }) {
   // 控制编辑页面显隐

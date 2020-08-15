@@ -17,17 +17,15 @@ RichEditor.propTypes = {
 function RichEditor(props) {
   const { title, type, noteValue } = props
 
-  if (type === 'empty') {
-    return (
-      <StyledRichEditor>
-        <Empty icon={note} />
-      </StyledRichEditor>
-    )
-  } else if (type === 'view') {
+  if (type === 'edit') return <EditMethod title={title} value={noteValue} />
+  else if (type === 'view')
     return <ViewerMethod value={noteValue} title={title} />
-  }
 
-  return <EditMethod title={title} value={noteValue} />
+  return (
+    <StyledRichEditor>
+      <Empty icon={note} />
+    </StyledRichEditor>
+  )
 }
 
 export default RichEditor

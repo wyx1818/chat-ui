@@ -1,15 +1,19 @@
 import React from 'react'
 import { animated, useTransition } from 'react-spring'
-import { Route, Switch, useLocation } from 'react-router-dom'
+import { Route, Switch, useLocation, Redirect } from 'react-router-dom'
+import { connect } from 'react-redux'
+
 import MessageList from 'components/MessageList'
 import ContactList from 'components/ContactList'
 import FileList from 'components/FileList'
 import NoteList from 'components/NoteList'
 import EditProfile from 'components/EditProfile'
-
 import { StyledSideBar } from './style'
+import { setContactType, setConversationType } from '../../redux/actions'
 
-function SideBar() {
+function SideBar(props) {
+  const { setContactType, setConversationType } = props
+
   const location = useLocation()
   const getFirstMatchPath = (location) => location.pathname.split('/')[1]
   const transitions = useTransition(location, getFirstMatchPath, {
@@ -23,11 +27,11 @@ function SideBar() {
       {transitions.map(({ item: location, props, key }) => (
         <animated.div key={key} style={props}>
           <Switch location={location}>
-            <Route exact path="/">
-              <MessageList />
+            <Route path="/chat">
+              <MessageList changeType={setConversationType} />
             </Route>
             <Route exact path="/contacts">
-              <ContactList />
+              <ContactList changeType={setContactType} />
             </Route>
             <Route exact path="/files">
               <FileList />
@@ -38,6 +42,7 @@ function SideBar() {
             <Route path="/settings">
               <EditProfile />
             </Route>
+            <Redirect to="/chat" from="/" exact />
           </Switch>
         </animated.div>
       ))}
@@ -45,4 +50,10 @@ function SideBar() {
   )
 }
 
-export default SideBar
+const mapDispatchToProps = (dispatch) => ({
+  setContactType: (contactType) => dispatch(setContactType(contactType)),
+  setConversationType: (conversationType) =>
+    dispatch(setConversationType(conversationType)),
+})
+
+export default connect(null, mapDispatchToProps)(SideBar)

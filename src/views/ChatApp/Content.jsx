@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch, useLocation } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Settings from '../../components/Settings'
@@ -10,24 +10,17 @@ import { StyledContent } from './style'
 import RichEditor from '../RichEditor'
 import FileView from '../FileView'
 import ContactView from '../ContactView'
-import { useTransition, animated } from 'react-spring'
 
 function Content(props) {
-  const { videoCallingState } = props
+  const {
+    videoCallingState,
+    conversationType,
+    contactType,
+    fileType,
+    noteType,
+  } = props
 
-  const location = useLocation()
-  const getFirstMatchPath = (location) => location.pathname.split('/')[1]
-  const transitions = useTransition(location, getFirstMatchPath, {
-    initial: { height: '100%' },
-    from: { opacity: 0 },
-    enter: { opacity: 1, height: '100%' },
-    leave: { opacity: 0 },
-    config: {
-      duration: 200,
-    },
-    delay: 200,
-  })
-  console.log(transitions)
+  console.log('侧边栏状态', conversationType, contactType, fileType, noteType)
 
   const noteValue = `
   # 荷塘月色
@@ -111,24 +104,30 @@ function Content(props) {
           <BlockedLIst />
         </Route>
         <Route exact path="/notes">
-          <RichEditor title="我是标题" type="empty" noteValue={noteValue} />
+          <RichEditor title="我是标题" type={noteType} noteValue={noteValue} />
         </Route>
         <Route exact path="/files">
-          <FileView />
+          <FileView type={fileType} />
         </Route>
         <Route exact path="/contacts">
-          <ContactView />
+          <ContactView type={contactType} />
         </Route>
-        <Route path="/">
-          <Conversation />
+        <Route exact path="/chat">
+          <Conversation type={conversationType} />
         </Route>
       </Switch>
     </StyledContent>
   )
 }
 
-const mapStateToProps = (state) => ({
-  videoCallingState: state.videoCalling.videoCallingState,
-})
+const mapStateToProps = (state) => {
+  return ({
+    videoCallingState: state.videoCalling.videoCallingState,
+    conversationType: state.sideBarRedux.conversationState,
+    contactType: state.sideBarRedux.contactState,
+    fileType: state.sideBarRedux.fileState,
+    noteType: state.sideBarRedux.noteState,
+  })
+}
 
 export default connect(mapStateToProps)(Content)

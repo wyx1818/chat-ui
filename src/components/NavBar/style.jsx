@@ -23,8 +23,6 @@ const StyledMenuItem = styled.div`
     ${({ active }) => (active ? '' : '&::before, &::after {height: 0}')};
 
     &:hover {
-
-
       svg {
         transform: scale(1.2);
         opacity: 1;
