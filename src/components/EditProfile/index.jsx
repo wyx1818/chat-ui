@@ -63,7 +63,7 @@ function EditProfile({ children, ...rest }) {
         <FontAwesomeIcon icon={faCheck} />
       </Button>
       <GroupTitle>基本信息</GroupTitle>
-      <InputText label="昵称" />
+      <InputText type='underline' label="昵称" />
       <GenderAndRegion>
         <Radio.Group label="性别">
           <Radio name="gender">男</Radio>
@@ -83,12 +83,12 @@ function EditProfile({ children, ...rest }) {
           </SelectGroup>
         </LabelContainer>
       </GenderAndRegion>
-      <InputText label="个性签名" />
+      <InputText type='underline' label="个性签名" />
 
       <GroupTitle>联系信息</GroupTitle>
-      <InputText label="联系电话" />
-      <InputText label="电子邮箱" />
-      <InputText label="个人网站" />
+      <InputText type='underline' label="联系电话" />
+      <InputText type='underline' label="电子邮箱" />
+      <InputText type='underline' label="个人网站" />
 
       <GroupTitle>社交信息</GroupTitle>
       <IconInput icon={faWeibo} bgColor="#F06767" />
@@ -102,7 +102,7 @@ function IconInput({ icon, bgColor, ...rest }) {
   return (
     <StyledIconInput>
       <Icon.Social icon={icon} bgColor={bgColor} />
-      <InputText {...rest} />
+      <InputText type='underline' {...rest} />
     </StyledIconInput>
   )
 }

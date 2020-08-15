@@ -7,14 +7,15 @@ import Text from '../Text'
 /**
  * label布局容器
  * @param children 展示输入控件
+ * @param direct
  * @param label label标签
  * @param rest
  * @returns {JSX.Element}
  * @constructor
  */
-function LabelContainer({ children, label, ...rest }) {
+function LabelContainer({ children, direct, label, ...rest }) {
   return (
-    <StyledLabelContainer {...rest}>
+    <StyledLabelContainer direct={direct} {...rest}>
       {label && <Text style={{ marginBottom: '8px' }}>{label}: </Text>}
       {children}
     </StyledLabelContainer>
@@ -23,6 +24,11 @@ function LabelContainer({ children, label, ...rest }) {
 
 LabelContainer.propTypes = {
   children: PropTypes.any,
+  direct: PropTypes.oneOf(['row', 'column'])
+}
+
+LabelContainer.defaultProps = {
+  direct: 'column'
 }
 
 export default LabelContainer

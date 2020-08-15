@@ -13,7 +13,6 @@ const initialState = {
 }
 
 const sideBarRedux = (state = initialState, action) => {
-  console.log('接受到的action', action)
   switch (action.type) {
     case SET_CONTACT_TYPE:
       return { ...state, contactState: action.contactType }

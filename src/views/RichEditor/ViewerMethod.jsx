@@ -1,6 +1,5 @@
 import React from 'react'
 import { Viewer } from '@toast-ui/react-editor'
-import 'tui-color-picker/dist/tui-color-picker.css'
 import hljs from 'highlight.js'
 import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight'
 import 'highlight.js/styles/github.css';

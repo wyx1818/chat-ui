@@ -17,7 +17,6 @@ export default [
     image: note1,
     title: '学习英语笔记',
     excerpt: 'Hello everyone！This is my first note!',
-    detail: '',
     publishedAt: now - min * 20,
     updatedAt: now - min * 2,
   },

@@ -15,9 +15,17 @@ RichEditor.propTypes = {
 }
 
 function RichEditor(props) {
-  const { title, type, noteValue } = props
+  const { title, type, noteValue, time } = props
 
-  if (type === 'edit') return <EditMethod title={title} value={noteValue} />
+  if (type === 'edit')
+    return (
+      <EditMethod
+        title={title}
+        value={noteValue}
+        type="edit"
+        time={time}
+      />
+    )
   else if (type === 'view')
     return <ViewerMethod value={noteValue} title={title} />
 
